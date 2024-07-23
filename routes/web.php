@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CreateUserController;
+use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +17,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::group(['middleware' => ['role:Sales|Admin']], function() {
+        Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory');
+    });
+    Route::group(['middleware' => ['role:Admin']], function() {
+        Route::get('/create-user', [CreateUserController::class, 'index'])->name('create-user');
+        Route::post('/create-user', [CreateUserController::class, 'store'])->name('create.post');
+    });
 });
 
 require __DIR__.'/auth.php';

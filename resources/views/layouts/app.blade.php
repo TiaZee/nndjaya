@@ -10,7 +10,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
+        <script src="https://kit.fontawesome.com/d508f9c7b5.js" crossorigin="anonymous"></script>
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -32,5 +32,25 @@
                 {{ $slot }}
             </main>
         </div>
+
+        <script>
+            const menuButton = document.getElementById('menu-button');
+            const closeButton = document.getElementById('close-button');
+            const offcanvasMenu = document.getElementById('offcanvas-menu');
+
+            menuButton.addEventListener('click', () => {
+                offcanvasMenu.classList.toggle('open');
+            });
+
+            closeButton.addEventListener('click', () => {
+                offcanvasMenu.classList.remove('open');
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target === offcanvasMenu) {
+                    offcanvasMenu.classList.remove('open');
+                }
+            });
+        </script>
     </body>
 </html>
