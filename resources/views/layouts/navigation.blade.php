@@ -51,6 +51,8 @@
         <x-dash-links :href="route('create-user')" :active="request()->routeIs('create-user')">Create User</x-dash-links>
         <x-dash-links :href="route('inventory')" :active="request()->routeIs('inventory')">Inventory</x-dash-links>
         <x-dash-links :href="route('order')" :active="request()->routeIs('order')">Order</x-dash-links>
+        <x-dash-links :href="route('acc-analisis.index')" :active="request()->routeIs('acc-analisis.index')">Account Analisis</x-dash-links>
+        <x-dash-links :href="route('item-analisis.index')" :active="request()->routeIs('item-analisis.index')">Item Analisis</x-dash-links>
         <x-dash-links>
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
