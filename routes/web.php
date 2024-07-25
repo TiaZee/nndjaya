@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\CreateUserController;
 use App\Http\Controllers\InventoryController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProcurementController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +21,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::group(['middleware' => ['role:Sales|Admin']], function() {
         Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory');
+        Route::get('/order', [OrderController::class, 'index'])->name('order');
+        Route::get('/procurement', [ProcurementController::class, 'index'])->name('procurement');
     });
     Route::group(['middleware' => ['role:Admin']], function() {
         Route::get('/create-user', [CreateUserController::class, 'index'])->name('create-user');
