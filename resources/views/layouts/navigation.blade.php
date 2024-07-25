@@ -98,6 +98,8 @@
     <nav class="flex flex-col p-4">
         <x-dash-links :href="route('dashboard')" :active="request()->routeIs('dashboard')">Dashboard</x-dash-links>
         <x-dash-links :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">Profile</x-dash-links>
+        <x-dash-links :href="route('acc-analisis.index')" :active="request()->routeIs('acc-analisis.index')">Account Analisis</x-dash-links>
+        <x-dash-links :href="route('item-analisis.index')" :active="request()->routeIs('item-analisis.index')">Item Analisis</x-dash-links>
         <x-dash-links>
             <form action="{{ route('logout') }}" method="POST">
                 @csrf

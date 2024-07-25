@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AccountAnalisisController;
 use App\Http\Controllers\CreateUserController;
 use App\Http\Controllers\InventoryController;
+use App\Http\Controllers\ItemAnalisisController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProcurementController;
 use App\Http\Controllers\ProfileController;
@@ -23,6 +25,10 @@ Route::middleware('auth')->group(function () {
         Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory');
         Route::get('/order', [OrderController::class, 'index'])->name('order');
         Route::get('/procurement', [ProcurementController::class, 'index'])->name('procurement');
+    });
+    Route::group(['middleware' => ['role:Accountant|Admin']], function() {
+        Route::get('/account-analisis', [AccountAnalisisController::class, 'index'])->name('acc-analisis.index');
+        Route::get('/item-analisis', [ItemAnalisisController::class, 'index'])->name('item-analisis.index');
     });
     Route::group(['middleware' => ['role:Admin']], function() {
         Route::get('/create-user', [CreateUserController::class, 'index'])->name('create-user');
