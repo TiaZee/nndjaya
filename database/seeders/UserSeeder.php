@@ -14,12 +14,12 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $admin = User::create([
-            'name' => 'Admin',
+            'name' => 'Owner',
             'email' => 'admin@erp.com',
             'password' => bcrypt('12345678'),
-            'role' => 'Admin'
+            'role' => 'Owner'
         ]);
-        $admin->assignRole('Admin');
+        $admin->assignRole('Owner');
 
         $sales = User::create([
             'name' => 'Sales',

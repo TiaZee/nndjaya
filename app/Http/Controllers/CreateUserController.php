@@ -31,8 +31,8 @@ class CreateUserController extends Controller
             'role' => $request->role
         ]);
 
-        if($request->role === "Admin"){
-            $user->assignRole('Admin');
+        if($request->role === "Owner"){
+            $user->assignRole('Owner');
         }else if($request->role === "Sales"){
             $user->assignRole('Sales');
         }else if($request->role === "Accountant"){

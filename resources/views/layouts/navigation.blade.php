@@ -8,7 +8,7 @@
     }
 </style>
 
-@role('Admin')
+@role('Owner')
 
 <nav class="bg-black text-white shadow-md w-full z-10 top-0">
     <div class="container mx-auto px-4 py-2 flex justify-between items-center">
@@ -49,7 +49,9 @@
         <x-dash-links :href="route('dashboard')" :active="request()->routeIs('dashboard')">Dashboard</x-dash-links>
         <x-dash-links :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">Profile</x-dash-links>
         <x-dash-links :href="route('create-user')" :active="request()->routeIs('create-user')">Create User</x-dash-links>
-        <x-dash-links :href="route('inventory')" :active="request()->routeIs('inventory')">Inventory</x-dash-links>
+        {{-- <x-dash-links :href="route('inventory')" :active="request()->routeIs('inventory')">Inventory</x-dash-links> --}}
+        <x-dash-links :href="route('suppliers.index')" :active="request()->routeIs('suppliers.index')">Supplier</x-dash-links>
+        <x-dash-links :href="route('items.index')" :active="request()->routeIs('items.index')">Items</x-dash-links>
         <x-dash-links :href="route('order')" :active="request()->routeIs('order')">Order</x-dash-links>
         <x-dash-links :href="route('acc-analisis.index')" :active="request()->routeIs('acc-analisis.index')">Account Analisis</x-dash-links>
         <x-dash-links :href="route('item-analisis.index')" :active="request()->routeIs('item-analisis.index')">Item Analisis</x-dash-links>
