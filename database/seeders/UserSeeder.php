@@ -15,19 +15,19 @@ class UserSeeder extends Seeder
     {
         $admin = User::create([
             'name' => 'Owner',
-            'email' => 'admin@erp.com',
+            'email' => 'owner@erp.com',
             'password' => bcrypt('12345678'),
             'role' => 'Owner'
         ]);
         $admin->assignRole('Owner');
 
         $sales = User::create([
-            'name' => 'Sales',
-            'email' => 'sales@erp.com',
+            'name' => 'Admin',
+            'email' => 'admin@erp.com',
             'password' => bcrypt('12345678'),
-            'role' => 'Sales'
+            'role' => 'Admin'
         ]);
-        $sales->assignRole('Sales');
+        $sales->assignRole('Admin');
 
         $accountant = User::create([
             'name' => 'Accountant',

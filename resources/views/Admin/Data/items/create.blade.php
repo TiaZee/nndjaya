@@ -26,6 +26,7 @@
                         <div class="form-control">
                             <label for="supp_id">Supplier:</label>
                             <select id="supp_id" name="supp_id" required>
+                                <option value="" selected disabled>Select Supplier</option>
                                 @foreach($suppliers as $supplier)
                                     <option value="{{ $supplier->id }}">{{ $supplier->name }}</option>
                                 @endforeach
@@ -44,7 +45,6 @@
 
                         <button class="btn text-white" type="submit">Create Item</button>
                     </form>
-
                 </div>
             </div>
         </div>

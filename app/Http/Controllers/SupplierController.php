@@ -10,12 +10,12 @@ class SupplierController extends Controller
     public function index()
     {
         $suppliers = Supplier::all();
-        return view('Sales.Data.suppliers.index', compact('suppliers'));
+        return view('Admin.Data.suppliers.index', compact('suppliers'));
     }
 
     public function create()
     {
-        return view('Sales.Data.suppliers.create');
+        return view('Admin.Data.suppliers.create');
     }
 
     public function store(Request $request)
@@ -36,7 +36,7 @@ class SupplierController extends Controller
 
     public function edit(Supplier $supplier)
     {
-        return view('Sales.Data.suppliers.edit', compact('supplier'));
+        return view('Admin.Data.suppliers.edit', compact('supplier'));
     }
 
     public function update(Request $request, Supplier $supplier)

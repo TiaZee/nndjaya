@@ -14,14 +14,14 @@ class ItemController extends Controller
     public function index()
     {
         $items = Item::with('supplier')->get(); // Eager load supplier relationship
-        return view('Sales.Data.items.index', compact('items'));
+        return view('Admin.Data.items.index', compact('items'));
     }
 
 
     public function create()
     {
         $suppliers = Supplier::all();
-        return view('Sales.Data.items.create', compact('suppliers'));
+        return view('Admin.Data.items.create', compact('suppliers'));
     }
 
     // public function store(Request $request)
@@ -74,7 +74,7 @@ class ItemController extends Controller
     {
         $item = Item::findOrFail($id);
         $suppliers = Supplier::all();
-        return view('Sales.Data.items.edit', compact('item', 'suppliers'));
+        return view('Admin.Data.items.edit', compact('item', 'suppliers'));
     }
 
     public function update(Request $request, $id)

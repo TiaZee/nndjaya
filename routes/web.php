@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RestockController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\OrderController;
@@ -23,7 +24,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::group(['middleware' => ['role:Sales|Owner']], function() {
+
+    Route::group(['middleware' => ['role:Admin|Owner']], function () {
         Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory');
         Route::get('/order', [OrderController::class, 'index'])->name('order');
         Route::get('/procurement', [ProcurementController::class, 'index'])->name('procurement');
@@ -39,10 +41,7 @@ Route::middleware('auth')->group(function () {
         Route::put('/suppliers/{supplier}', [SupplierController::class, 'update'])->name('suppliers.update');
         // Route to delete a specific supplier
         Route::delete('/suppliers/{supplier}', [SupplierController::class, 'destroy'])->name('suppliers.destroy');
-    });
-    Route::group(['middleware' => ['role:Accountant|Owner']], function() {
-        Route::get('/account-analisis', [AccountAnalisisController::class, 'index'])->name('acc-analisis.index');
-        Route::get('/item-analisis', [ItemAnalisisController::class, 'index'])->name('item-analisis.index');
+
         // Route to display the list of items
         Route::get('/items', [ItemController::class, 'index'])->name('items.index');
         // Route to display the form for creating a new item
@@ -55,11 +54,24 @@ Route::middleware('auth')->group(function () {
         Route::put('/items/{id}', [ItemController::class, 'update'])->name('items.update');
         // Route to delete an item
         Route::delete('/items/{id}', [ItemController::class, 'destroy'])->name('items.destroy');
+
+        Route::get('/restocks', [RestockController::class, 'index'])->name('restocks.index');
+        Route::get('/restocks/create', [RestockController::class, 'create'])->name('restocks.create');
+        Route::post('/restocks', [RestockController::class, 'store'])->name('restocks.store');
+        Route::get('/restocks/{id}/edit', [RestockController::class, 'edit'])->name('restocks.edit');
+        Route::put('/restocks/{id}', [RestockController::class, 'update'])->name('restocks.update');
+        Route::delete('/restocks/{id}', [RestockController::class, 'destroy'])->name('restocks.destroy');
     });
-    Route::group(['middleware' => ['role:Owner']], function() {
+
+    Route::group(['middleware' => ['role:Accountant|Owner']], function () {
+        Route::get('/account-analisis', [AccountAnalisisController::class, 'index'])->name('acc-analisis.index');
+        Route::get('/item-analisis', [ItemAnalisisController::class, 'index'])->name('item-analisis.index');
+    });
+
+    Route::group(['middleware' => ['role:Owner']], function () {
         Route::get('/create-user', [CreateUserController::class, 'index'])->name('create-user');
         Route::post('/create-user', [CreateUserController::class, 'store'])->name('create.post');
     });
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

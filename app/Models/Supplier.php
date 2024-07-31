@@ -10,7 +10,7 @@ class Supplier extends Model
     use HasFactory;
 
     protected $primaryKey = 'id';
-    public $incrementing = false;   
+    public $incrementing = false;
     protected $keyType = 'string';
 
     protected $fillable = [
@@ -21,4 +21,8 @@ class Supplier extends Model
         'bank',
         'bank_number',
     ];
+    public function items()
+    {
+        return $this->hasMany(Item::class, 'supp_id');
+    }
 }

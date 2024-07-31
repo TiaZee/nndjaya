@@ -10,7 +10,7 @@ class CreateUserController extends Controller
 {
     public function index()
     {
-        return view('Admin.create-profile', [
+        return view('Owner.create-profile', [
             'roles' => Role::all()
         ]);
     }
@@ -31,11 +31,11 @@ class CreateUserController extends Controller
             'role' => $request->role
         ]);
 
-        if($request->role === "Owner"){
+        if ($request->role === "Owner") {
             $user->assignRole('Owner');
-        }else if($request->role === "Sales"){
-            $user->assignRole('Sales');
-        }else if($request->role === "Accountant"){
+        } else if ($request->role === "Admin") {
+            $user->assignRole('Admin');
+        } else if ($request->role === "Accountant") {
             $user->assignRole('Accountant');
         }
 
