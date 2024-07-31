@@ -7,10 +7,10 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <a href="{{ route('sales.create') }}" class="btn btn-primary">Add Sale</a>
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6 space-y-4">
+                <a href="{{ route('sales.create') }}" class="btn text-white">Add Sale</a>
                 <table class="table">
-                    <thead>
+                    <thead class="text-black">
                         <tr>
                             <th>ID</th>
                             <th>Buyer Name</th>

@@ -59,7 +59,7 @@
         <x-dash-links>
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
-                <button type="submit" class="text-black hover:text-white w-full text-start">Logout</button>
+                <button type="submit" class="text-black hover:text-white w-full text-start h-full">Logout</button>
             </form>
         </x-dash-link>
     </nav>
