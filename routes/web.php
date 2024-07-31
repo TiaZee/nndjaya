@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CreateUserController;
 use App\Http\Controllers\ItemAnalisisController;
 use App\Http\Controllers\AccountAnalisisController;
+use App\Http\Controllers\SalesController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -57,6 +58,13 @@ Route::middleware('auth')->group(function () {
         Route::get('/restocks/{id}/edit', [RestockController::class, 'edit'])->name('restocks.edit');
         Route::put('/restocks/{id}', [RestockController::class, 'update'])->name('restocks.update');
         Route::delete('/restocks/{id}', [RestockController::class, 'destroy'])->name('restocks.destroy');
+
+        Route::get('/sales', [SalesController::class, 'index'])->name('sales.index');
+        Route::get('/sales/create', [SalesController::class, 'create'])->name('sales.create');
+        Route::post('/sales', [SalesController::class, 'store'])->name('sales.store');
+        Route::get('/sales/{id}/edit', [SalesController::class, 'edit'])->name('sales.edit');
+        Route::put('/sales/{id}', [SalesController::class, 'update'])->name('sales.update');
+        Route::delete('/sales/{id}', [SalesController::class, 'destroy'])->name('sales.destroy');
     });
 
     Route::group(['middleware' => ['role:Accountant|Owner']], function () {

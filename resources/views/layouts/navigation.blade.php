@@ -50,6 +50,7 @@
         <x-dash-links :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">Profile</x-dash-links>
         <x-dash-links :href="route('create-user')" :active="request()->routeIs('create-user')">Create User</x-dash-links>
         {{-- <x-dash-links :href="route('inventory')" :active="request()->routeIs('inventory')">Inventory</x-dash-links> --}}
+        <x-dash-links :href="route('sales.index')" :active="request()->routeIs('sales.index')">Sales</x-dash-links>
         <x-dash-links :href="route('restocks.index')" :active="request()->routeIs('restocks.index')">Restock</x-dash-links>
         <x-dash-links :href="route('suppliers.index')" :active="request()->routeIs('suppliers.index')">Supplier</x-dash-links>
         <x-dash-links :href="route('items.index')" :active="request()->routeIs('items.index')">Items</x-dash-links>
