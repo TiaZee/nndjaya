@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->string('id')->primary(); // Custom ID like "ITM0001"
-            $table->string('name');
+            $table->string('name')->unique();
             $table->integer('item_qty');
             $table->string('supp_id');
             $table->decimal('buy_price', 19, 2);

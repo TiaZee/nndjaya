@@ -12,14 +12,14 @@ class RestockController extends Controller
     public function index()
     {
         $restocks = Restock::all();
-        return view('Admin.restocks.index', compact('restocks'));
+        return view('Admin.Restocks.index', compact('restocks'));
     }
 
     public function create()
     {
         $suppliers = Supplier::all();
         $items = Item::all();
-        return view('Admin.restocks.create', compact('suppliers', 'items'));
+        return view('Admin.Restocks.create', compact('suppliers', 'items'));
     }
 
     public function store(Request $request)
@@ -64,7 +64,7 @@ class RestockController extends Controller
         $restock = Restock::findOrFail($id);
         $suppliers = Supplier::all();
         $items = Item::all();
-        return view('Admin.restocks.edit', compact('restock', 'suppliers', 'items'));
+        return view('Admin.Restocks.edit', compact('restock', 'suppliers', 'items'));
     }
 
     public function update(Request $request, $id)
