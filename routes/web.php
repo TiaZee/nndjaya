@@ -1,14 +1,10 @@
 <?php
-
-use App\Http\Controllers\RestockController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SupplierController;
-use App\Http\Controllers\InventoryController;
+use App\Http\Controllers\RestockController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CreateUserController;
-use App\Http\Controllers\ProcurementController;
 use App\Http\Controllers\ItemAnalisisController;
 use App\Http\Controllers\AccountAnalisisController;
 
@@ -26,9 +22,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::group(['middleware' => ['role:Admin|Owner']], function () {
-        Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory');
-        Route::get('/order', [OrderController::class, 'index'])->name('order');
-        Route::get('/procurement', [ProcurementController::class, 'index'])->name('procurement');
+        // Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory');
+        // Route::get('/order', [OrderController::class, 'index'])->name('order');
+        // Route::get('/procurement', [ProcurementController::class, 'index'])->name('procurement');
         // Route to display the list of suppliers
         Route::get('/suppliers', [SupplierController::class, 'index'])->name('suppliers.index');
         // Route to show the form for creating a new supplier
