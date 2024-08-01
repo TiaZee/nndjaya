@@ -7,7 +7,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CreateUserController;
 use App\Http\Controllers\ItemAnalisisController;
 use App\Http\Controllers\AccountAnalisisController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\SalesController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -65,6 +67,19 @@ Route::middleware('auth')->group(function () {
         Route::get('/sales/{id}/edit', [SalesController::class, 'edit'])->name('sales.edit');
         Route::put('/sales/{id}', [SalesController::class, 'update'])->name('sales.update');
         Route::delete('/sales/{id}', [SalesController::class, 'destroy'])->name('sales.destroy');
+
+        // Route::get('/report', [ReportController::class, 'index'])->name('report.index');
+        // Route::get('/report', [ReportController::class, 'generateReport'])->name('report.generate');
+
+        // Route to display the report form
+        // Route::get('/report', [ReportController::class, 'index'])->name('report.index');
+        Route::get('/report', [ReportController::class, 'index'])->name('report.index');
+        // Route::get('/report', [ReportController::class, 'generateReport'])->name('report.index');
+
+        // Route::get('/report', function () {return view('report.index');})->name('report.index');
+        // Route::get('/report', [ReportController::class, 'index'])->name('report.index');
+        // Route to handle the report generation
+        // Route::get('/report', [ReportController::class, 'generateReport'])->name('report.generate');
     });
 
     Route::group(['middleware' => ['role:Accountant|Owner']], function () {

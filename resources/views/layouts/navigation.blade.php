@@ -54,6 +54,7 @@
         <x-dash-links :href="route('restocks.index')" :active="request()->routeIs('restocks.index')">Restock</x-dash-links>
         <x-dash-links :href="route('suppliers.index')" :active="request()->routeIs('suppliers.index')">Supplier</x-dash-links>
         <x-dash-links :href="route('items.index')" :active="request()->routeIs('items.index')">Items</x-dash-links>
+        <x-dash-links :href="route('report.index')" :active="request()->routeIs('items.index')">Reports</x-dash-links>
         <x-dash-links :href="route('acc-analisis.index')" :active="request()->routeIs('acc-analisis.index')">Account Analisis</x-dash-links>
         <x-dash-links :href="route('item-analisis.index')" :active="request()->routeIs('item-analisis.index')">Item Analisis</x-dash-links>
         <x-dash-links>
