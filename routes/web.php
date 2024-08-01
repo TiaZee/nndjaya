@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\SupplierController;
@@ -54,6 +55,7 @@ Route::middleware('auth')->group(function () {
         // Route to delete an item
         Route::delete('/items/{id}', [ItemController::class, 'destroy'])->name('items.destroy');
 
+        // Route to display the Restock form
         Route::get('/restocks', [RestockController::class, 'index'])->name('restocks.index');
         Route::get('/restocks/create', [RestockController::class, 'create'])->name('restocks.create');
         Route::post('/restocks', [RestockController::class, 'store'])->name('restocks.store');
@@ -61,6 +63,7 @@ Route::middleware('auth')->group(function () {
         Route::put('/restocks/{id}', [RestockController::class, 'update'])->name('restocks.update');
         Route::delete('/restocks/{id}', [RestockController::class, 'destroy'])->name('restocks.destroy');
 
+        // Route to display the sales form
         Route::get('/sales', [SalesController::class, 'index'])->name('sales.index');
         Route::get('/sales/create', [SalesController::class, 'create'])->name('sales.create');
         Route::post('/sales', [SalesController::class, 'store'])->name('sales.store');
@@ -68,18 +71,9 @@ Route::middleware('auth')->group(function () {
         Route::put('/sales/{id}', [SalesController::class, 'update'])->name('sales.update');
         Route::delete('/sales/{id}', [SalesController::class, 'destroy'])->name('sales.destroy');
 
-        // Route::get('/report', [ReportController::class, 'index'])->name('report.index');
-        // Route::get('/report', [ReportController::class, 'generateReport'])->name('report.generate');
-
         // Route to display the report form
-        // Route::get('/report', [ReportController::class, 'index'])->name('report.index');
         Route::get('/report', [ReportController::class, 'index'])->name('report.index');
-        // Route::get('/report', [ReportController::class, 'generateReport'])->name('report.index');
-
-        // Route::get('/report', function () {return view('report.index');})->name('report.index');
-        // Route::get('/report', [ReportController::class, 'index'])->name('report.index');
-        // Route to handle the report generation
-        // Route::get('/report', [ReportController::class, 'generateReport'])->name('report.generate');
+        
     });
 
     Route::group(['middleware' => ['role:Accountant|Owner']], function () {

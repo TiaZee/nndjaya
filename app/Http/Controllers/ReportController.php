@@ -7,7 +7,6 @@ use App\Models\Sales;
 use App\Models\Item;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\DB;
 
 class ReportController extends Controller
 {
