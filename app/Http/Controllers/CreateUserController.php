@@ -11,7 +11,7 @@ class CreateUserController extends Controller
     public function index()
     {
         return view('Owner.create-profile', [
-            'roles' => Role::all()
+            'roles' => Role::where('name', '!=', 'Owner')->get(),
         ]);
     }
 
