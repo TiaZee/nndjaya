@@ -8,11 +8,11 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <form method="POST" action="{{ route('restocks.update', $restock->id) }}">
+                <form method="POST" action="{{ route('restocks.update', $restock->id) }}" class="p-6 space-y-4 text-black">
                     @csrf
                     @method('PUT')
 
-                    <div>
+                    <div class="form-control">
                         <label for="supp_id">Supplier</label>
                         <select name="supp_id" id="supp_id" required>
                             <option value="" selected disabled>Select Supplier</option>
@@ -24,14 +24,14 @@
                         </select>
                     </div>
 
-                    <div>
+                    <div class="form-control">
                         <label for="item_id">Item</label>
                         <select name="item_id" id="item_id" required>
                             <!-- Options will be populated by JavaScript -->
                         </select>
                     </div>
 
-                    <div>
+                    <div class="form-control">
                         <label for="buy_qty">Buy Quantity</label>
                         <input id="buy_qty" class="block mt-1 w-full" type="number" name="buy_qty" value="{{ $restock->buy_qty }}" required />
                     </div>
