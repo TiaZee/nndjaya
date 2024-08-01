@@ -65,7 +65,7 @@ class SalesController extends Controller
 
     public function edit($id)
     {
-        $sale = Sales::findOrFail($id);
+        $sales = Sales::findOrFail($id);
         $items = Item::all();
         return view('admin.sales.edit', compact('sales', 'items'));
     }
@@ -79,23 +79,23 @@ class SalesController extends Controller
             'sale_qty' => 'required|integer|min:1',
         ]);
 
-        $sale = Sales::findOrFail($id);
+        $sales = Sales::findOrFail($id);
         $item = Item::find($request->item_id);
 
         // Revert the previous item quantity
-        $previousItem = Item::find($sale->item_id);
-        $previousItem->item_qty += $sale->sale_qty;
+        $previousItem = Item::find($sales->item_id);
+        $previousItem->item_qty += $sales->sale_qty;
         $previousItem->save();
 
         // Update sale
-        $sale->buyer_name = $request->buyer_name;
-        $sale->buyer_address = $request->buyer_address;
-        $sale->item_id = $item->id;
-        $sale->name_item = $item->name;
-        $sale->sale_price = $item->sale_price;
-        $sale->sale_qty = $request->sale_qty;
-        $sale->sale_total = $item->sale_price * $request->sale_qty;
-        $sale->save();
+        $sales->buyer_name = $request->buyer_name;
+        $sales->buyer_address = $request->buyer_address;
+        $sales->item_id = $item->id;
+        $sales->name_item = $item->name;
+        $sales->sale_price = $item->sale_price;
+        $sales->sale_qty = $request->sale_qty;
+        $sales->sale_total = $item->sale_price * $request->sale_qty;
+        $sales->save();
 
         // Update the item quantity
         $item->item_qty -= $request->sale_qty;

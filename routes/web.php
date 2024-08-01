@@ -25,34 +25,24 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+     // Route to display the report form
+    Route::get('/report', [ReportController::class, 'index'])->name('report.index');
+
     Route::group(['middleware' => ['role:Admin|Owner']], function () {
-        // Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory');
-        // Route::get('/order', [OrderController::class, 'index'])->name('order');
-        // Route::get('/procurement', [ProcurementController::class, 'index'])->name('procurement');
         // Route to display the list of suppliers
         Route::get('/suppliers', [SupplierController::class, 'index'])->name('suppliers.index');
-        // Route to show the form for creating a new supplier
         Route::get('/suppliers/create', [SupplierController::class, 'create'])->name('suppliers.create');
-        // Route to store a newly created supplier
         Route::post('/suppliers', [SupplierController::class, 'store'])->name('suppliers.store');
-        // Route to display the form for editing a supplier
         Route::get('/suppliers/{supplier}/edit', [SupplierController::class, 'edit'])->name('suppliers.edit');
-        // Route to update a specific supplier
         Route::put('/suppliers/{supplier}', [SupplierController::class, 'update'])->name('suppliers.update');
-        // Route to delete a specific supplier
         Route::delete('/suppliers/{supplier}', [SupplierController::class, 'destroy'])->name('suppliers.destroy');
 
         // Route to display the list of items
         Route::get('/items', [ItemController::class, 'index'])->name('items.index');
-        // Route to display the form for creating a new item
         Route::get('/items/create', [ItemController::class, 'create'])->name('items.create');
-        // Route to store a newly created item
         Route::post('/items', [ItemController::class, 'store'])->name('items.store');
-        // Route to display the form for editing an item
         Route::get('/items/{id}/edit', [ItemController::class, 'edit'])->name('items.edit');
-        // Route to update an existing item
         Route::put('/items/{id}', [ItemController::class, 'update'])->name('items.update');
-        // Route to delete an item
         Route::delete('/items/{id}', [ItemController::class, 'destroy'])->name('items.destroy');
 
         // Route to display the Restock form
@@ -70,10 +60,6 @@ Route::middleware('auth')->group(function () {
         Route::get('/sales/{id}/edit', [SalesController::class, 'edit'])->name('sales.edit');
         Route::put('/sales/{id}', [SalesController::class, 'update'])->name('sales.update');
         Route::delete('/sales/{id}', [SalesController::class, 'destroy'])->name('sales.destroy');
-
-        // Route to display the report form
-        Route::get('/report', [ReportController::class, 'index'])->name('report.index');
-        
     });
 
     Route::group(['middleware' => ['role:Accountant|Owner']], function () {
