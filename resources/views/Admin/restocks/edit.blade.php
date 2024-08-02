@@ -8,6 +8,12 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                @foreach ($errors->all() as $error)
+                    <div class="flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <li>{{ $error }}</li>
+                    </div>
+                @endforeach
                 <form method="POST" action="{{ route('restocks.update', $restock->id) }}" class="p-6 space-y-4 text-black">
                     @csrf
                     @method('PUT')

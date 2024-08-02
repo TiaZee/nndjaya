@@ -8,6 +8,18 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                @if (session('success'))
+                    <div role="alert" class="alert alert-success rounded-none">
+                        <div class="flex items-center justify-center gap-2">
+                            <ul class="flex items-center gap-2 ">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <li>
+                                    {{ session('success') }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                @endif
                 <div class="p-6 text-gray-900">
                     <div class="container">
                         @if (session('success'))

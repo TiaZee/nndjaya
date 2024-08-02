@@ -5,8 +5,24 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <style>
+        
+    </style>
+
+    <div class="py-12 m-3">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            @if ($errors->any())
+                <div role="alert" class="alert alert-warning rounded-none">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <div class="flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <li>{{ $error }}</li>
+                        </div>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <form method="POST" action="{{ route('sales.store') }}" class="p-6 space-y-4 text-black">
                     @csrf

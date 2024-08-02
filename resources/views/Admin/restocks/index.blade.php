@@ -8,6 +8,18 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6 space-y-4">
+                @if (session('success'))
+                    <div role="alert" class="alert alert-success rounded-none">
+                        <div class="flex items-center justify-center gap-2">
+                            <ul class="flex items-center gap-2 ">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <li>
+                                    {{ session('success') }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                @endif
                 <a href="{{ route('restocks.create') }}" class="btn text-white">Add Restock</a>
                 <table class="table">
                     <thead class="text-black">
@@ -23,7 +35,7 @@
                             <th>Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="text-black">
                         @foreach($restocks as $restock)
                             <tr>
                                 <td>{{ $restock->id }}</td>
