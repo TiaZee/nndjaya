@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.alert-success{
+    background-color: #00A96E !important;
+    color: #fff;
+    border: none;
+    outline: none;
+    width: 100% !important;
+}
+
+.alert-warning{
+    background-color: #FFBE00 !important;
+    color: #000;
+    border: none;
+    outline: none;
+}
