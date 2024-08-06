@@ -30,3 +30,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+function formatNumber(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+function formatAllNumbers() {
+    var elements = document.querySelectorAll('.format-number');
+    elements.forEach(function(element) {
+        var number = parseInt(element.textContent, 10);
+        element.textContent = formatNumber(number);
+    });
+}
+
+window.onload = formatAllNumbers;

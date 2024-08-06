@@ -4,8 +4,9 @@
     <aside id="sidebar" class="fixed inset-y-0 left-0 z-30 w-64 transition-transform transform bg-[#ffaac4] text-white md:translate-x-0 md:relative md:flex md:flex-col md:items-center md:justify-between show">
         <div class="flex flex-col flex-grow w-full">
             <!-- Logo -->
-            <div class="flex items-center justify-center h-16">
+            <div class="flex items-center justify-center h-16 gap-2">
                 <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="w-12 h-12"/>
+                <h1 class="text-lg font-bold">NN DJAYA SNACK</h1>
             </div>
 
             <!-- Sidebar Menu -->
@@ -121,6 +122,8 @@
             </nav>
         </div>
 
+        @include('layouts.nav-footer')
+
     </aside>
 
     <aside id="sidebar-icons" class="fixed inset-y-0 left-0 z-30 w-[80px] transition-transform transform bg-[#ffaac4] text-white hidden">
@@ -224,6 +227,7 @@
         </div>
 
     </aside>
+
 </div>
 
 @elserole('Accountant')
