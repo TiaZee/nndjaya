@@ -6,7 +6,7 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="w-full mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6">
                 <!-- Include Flatpickr CSS -->
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -51,7 +51,7 @@
 
                         <table class="table-auto w-full mt-4">
                             <thead>
-                                <tr>
+                                <tr class="text-black">
                                     <th class="px-4 py-2">Item Name</th>
                                     <th class="px-4 py-2">Item Restock Total</th>
                                     <th class="px-4 py-2">Buy Price Total</th>
@@ -65,16 +65,16 @@
                             </thead>
                             <tbody>
                                 @foreach($reportData as $data)
-                                    <tr>
+                                    <tr class="text-black">
                                         <td class="border px-4 py-2">{{ $data['item_name'] }}</td>
-                                        <td class="border px-4 py-2">{{ $data['restock_quantity'] }}</td>
-                                        <td class="border px-4 py-2">{{ $data['money_spent'] }}</td>
-                                        <td class="border px-4 py-2">{{ $data['sale_quantity'] }}</td>
-                                        <td class="border px-4 py-2">{{ $data['money_earned'] }}</td>
-                                        <td class="border px-4 py-2">{{ $data['item_quantity'] }}</td>
-                                        <td class="border px-4 py-2">{{ $data['current_stock_value'] }}</td>
-                                        <td class="border px-4 py-2">{{ $data['sold_out_profit'] }}</td>
-                                        <td class="border px-4 py-2">{{ $data['profit'] }}</td>
+                                        <td class="border px-4 py-2 format-number">{{ $data['restock_quantity'] }}</td>
+                                        <td class="border px-4 py-2 format-number">{{ $data['money_spent'] }}</td>
+                                        <td class="border px-4 py-2 format-number">{{ $data['sale_quantity'] }}</td>
+                                        <td class="border px-4 py-2 format-number">{{ $data['money_earned'] }}</td>
+                                        <td class="border px-4 py-2 format-number">{{ $data['item_quantity'] }}</td>
+                                        <td class="border px-4 py-2 format-number">{{ $data['current_stock_value'] }}</td>
+                                        <td class="border px-4 py-2 format-number">{{ $data['sold_out_profit'] }}</td>
+                                        <td class="border px-4 py-2 format-number">{{ $data['profit'] }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

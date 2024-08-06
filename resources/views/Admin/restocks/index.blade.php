@@ -6,7 +6,7 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="w-full mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6 space-y-4">
                 @if (session('success'))
                     <div role="alert" class="alert alert-success rounded-none">
@@ -41,9 +41,9 @@
                                 <td>{{ $restock->id }}</td>
                                 <td>{{ $restock->supp_name }}</td>
                                 <td>{{ $restock->name_item }}</td>
-                                <td>{{ $restock->buy_price }}</td>
+                                <td class="format-number">{{ $restock->buy_price }}</td>
                                 <td>{{ $restock->buy_qty }}</td>
-                                <td>{{ $restock->buy_total }}</td>
+                                <td class="format-number">{{ $restock->buy_total }}</td>
                                 <td>{{ $restock->created_at }}</td>
                                 <td>{{ $restock->updated_at }}</td>
                                 <td>

@@ -8,7 +8,7 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="w-full mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 @if (session('success'))
                     <div role="alert" class="alert alert-success rounded-none">
@@ -44,8 +44,8 @@
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->item_qty }}</td>
                                     <td>{{ $item->supplier->name }}</td> <!-- Assuming Supplier relationship -->
-                                    <td>{{ $item->buy_price }}</td>
-                                    <td>{{ $item->sale_price }}</td>
+                                    <td class="format-number">{{ $item->buy_price }}</td>
+                                    <td class="format-number">{{ $item->sale_price }}</td>
                                     <td>
                                         <a class="btn btn-warning btn-sm" href="{{ route('items.edit', $item->id) }}">Edit</a>
                                         <form action="{{ route('items.destroy', $item->id) }}" method="POST" style="display:inline;">

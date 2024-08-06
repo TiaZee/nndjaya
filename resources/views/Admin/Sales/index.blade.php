@@ -6,11 +6,11 @@
     </x-slot>
 
     <style>
-        
+
     </style>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="w-full mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6 space-y-4">
                 @if (session('success'))
                     <div role="alert" class="alert alert-success rounded-none">
@@ -48,9 +48,9 @@
                                 <td>{{ $sale->buyer_name }}</td>
                                 <td>{{ $sale->buyer_address }}</td>
                                 <td>{{ $sale->name_item }}</td>
-                                <td>{{ $sale->sale_price }}</td>
+                                <td class="format-number">{{ $sale->sale_price }}</td>
                                 <td>{{ $sale->sale_qty }}</td>
-                                <td>{{ $sale->sale_total }}</td>
+                                <td class="format-number">{{ $sale->sale_total }}</td>
                                 <td>{{ $sale->created_at }}</td>
                                 <td>{{ $sale->updated_at }}</td>
                                 <td class="flex gap-1">

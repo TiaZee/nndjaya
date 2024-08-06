@@ -6,11 +6,11 @@
     </x-slot>
 
     <style>
-        
+
     </style>
 
     <div class="py-12 m-3">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="w-full mx-auto sm:px-6 lg:px-8">
             @if ($errors->any())
                 <div role="alert" class="alert alert-warning rounded-none">
                     <ul>
