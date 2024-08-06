@@ -87,6 +87,17 @@
                             </div>
                         </x-dash-links>
                     </li>
+                    <li>
+                        <x-dash-links :href="route('report.index')" :active="request()->routeIs('report.index')">
+                            <div class="flex">
+                                <div class="icons">
+                                    <i class="fa-solid fa-book"></i>
+                                </div>
+                                Report
+
+                            </div>
+                        </x-dash-links>
+                    </li>
                     {{-- <li>
                         <x-dash-links :href="route('acc-analisis.index')" :active="request()->routeIs('acc-analisis.index')">Account Analisis</x-dash-links>
                     </li>
@@ -183,6 +194,15 @@
                             <x-dash-links :href="route('sales.index')" :active="request()->routeIs('sales.index')">
                                 <center>
                                     <i class="fa-solid fa-cart-arrow-down"></i>
+                                </center>
+                            </x-dash-links>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tooltip tooltip-right w-full" data-tip="Sales">
+                            <x-dash-links :href="route('report.index')" :active="request()->routeIs('report.index')">
+                                <center>
+                                    <i class="fa-solid fa-book"></i>
                                 </center>
                             </x-dash-links>
                         </div>
