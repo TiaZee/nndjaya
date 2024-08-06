@@ -42,7 +42,7 @@
                                 <tr>
                                     <td>{{ $item->id }}</td>
                                     <td>{{ $item->name }}</td>
-                                    <td>{{ $item->item_qty }}</td>
+                                    <td class="format-number">{{ $item->item_qty }}</td>
                                     <td>{{ $item->supplier->name }}</td> <!-- Assuming Supplier relationship -->
                                     <td class="format-number">{{ $item->buy_price }}</td>
                                     <td class="format-number">{{ $item->sale_price }}</td>

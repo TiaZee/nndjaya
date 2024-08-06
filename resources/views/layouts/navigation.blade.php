@@ -122,6 +122,8 @@
             </nav>
         </div>
 
+        @include('layouts.nav-footer')
+
     </aside>
 
     <aside id="sidebar-icons" class="fixed inset-y-0 left-0 z-30 w-[80px] transition-transform transform bg-[#ffaac4] text-white hidden">
@@ -225,6 +227,7 @@
         </div>
 
     </aside>
+
 </div>
 
 @elserole('Accountant')

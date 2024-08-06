@@ -49,7 +49,7 @@
                                 <td>{{ $sale->buyer_address }}</td>
                                 <td>{{ $sale->name_item }}</td>
                                 <td class="format-number">{{ $sale->sale_price }}</td>
-                                <td>{{ $sale->sale_qty }}</td>
+                                <td class="format-number">{{ $sale->sale_qty }}</td>
                                 <td class="format-number">{{ $sale->sale_total }}</td>
                                 <td>{{ $sale->created_at }}</td>
                                 <td>{{ $sale->updated_at }}</td>

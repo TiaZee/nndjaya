@@ -42,7 +42,7 @@
                                 <td>{{ $restock->supp_name }}</td>
                                 <td>{{ $restock->name_item }}</td>
                                 <td class="format-number">{{ $restock->buy_price }}</td>
-                                <td>{{ $restock->buy_qty }}</td>
+                                <td class="format-number">{{ $restock->buy_qty }}</td>
                                 <td class="format-number">{{ $restock->buy_total }}</td>
                                 <td>{{ $restock->created_at }}</td>
                                 <td>{{ $restock->updated_at }}</td>
