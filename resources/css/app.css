@@ -2,17 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-.alert-success{
-    background-color: #00A96E !important;
-    color: #fff;
-    border: none;
-    outline: none;
-    width: 100% !important;
+/* Tambahkan kelas untuk menyembunyikan sidebar */
+.hidden {
+    transform: translateX(-100%) !important;
 }
 
-.alert-warning{
-    background-color: #FFBE00 !important;
-    color: #000;
-    border: none;
-    outline: none;
+/* Tambahkan kelas untuk menampilkan sidebar */
+.show {
+    transform: translateX(0) !important;
 }
+
+/* Tambahkan kelas untuk animasi transisi */
+.transition-transform {
+    transition: transform 0.3s ease;
+}
+
+/* Kelas untuk menambahkan margin pada konten utama saat sidebar ditampilkan */
+.content-margin {
+    margin-left: 0; /* Sesuaikan dengan lebar sidebar */
+}
+
+/* Kelas untuk menghapus margin pada konten utama saat sidebar disembunyikan */
+.content-no-margin {
+    margin-left: -170px;
+}
+
+.icons{
+    width: 30px;
+}
+
