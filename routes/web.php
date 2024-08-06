@@ -68,8 +68,9 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::group(['middleware' => ['role:Owner']], function () {
-        Route::get('/create-user', [CreateUserController::class, 'index'])->name('create-user');
-        Route::post('/create-user', [CreateUserController::class, 'store'])->name('create.post');
+        Route::get('/create-user', [CreateUserController::class, 'home'])->name('create-user.home');
+        Route::get('/create-user/create', [CreateUserController::class, 'index'])->name('create-user');
+        Route::post('/create-user/create', [CreateUserController::class, 'store'])->name('create.post');
     });
 });
 

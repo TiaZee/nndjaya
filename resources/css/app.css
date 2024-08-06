@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Tambahkan kelas untuk menyembunyikan sidebar */
+.hidden {
+    transform: translateX(-100%) !important;
+}
+
+/* Tambahkan kelas untuk menampilkan sidebar */
+.show {
+    transform: translateX(0) !important;
+}
+
+/* Tambahkan kelas untuk animasi transisi */
+.transition-transform {
+    transition: transform 0.3s ease;
+}
+
+/* Kelas untuk menambahkan margin pada konten utama saat sidebar ditampilkan */
+.content-margin {
+    margin-left: 0; /* Sesuaikan dengan lebar sidebar */
+}
+
+/* Kelas untuk menghapus margin pada konten utama saat sidebar disembunyikan */
+.content-no-margin {
+    margin-left: -170px;
+}
+
+.icons{
+    width: 30px;
+}
+

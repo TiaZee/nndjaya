@@ -8,6 +8,13 @@ use Spatie\Permission\Models\Role;
 
 class CreateUserController extends Controller
 {
+    public function home()
+    {
+        return view('Owner.index', [
+            'users' => User::all()
+        ]);
+    }
+
     public function index()
     {
         return view('Owner.create-profile', [

@@ -15,42 +15,33 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen bg-gray-100 flex">
             @include('layouts.navigation')
 
-            <!-- Page Heading -->
-            @isset($header)
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endisset
+            <div class="w-full" id="content">
+                <div class="flex">
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+                    <!-- Page Heading -->
+                    @isset($header)
+                        <header class="bg-white shadow flex justify-start items-center w-full p-4">
+                            <button id="toggleSidebar" class="p-2 text-black">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                                </svg>
+                            </button>
+                            <div>
+                                {{ $header }}
+                            </div>
+                        </header>
+                    @endisset
+
+                </div>
+
+                <!-- Page Content -->
+                <main>
+                    {{ $slot }}
+                </main>
+            </div>
         </div>
-
-        <script>
-            const menuButton = document.getElementById('menu-button');
-            const closeButton = document.getElementById('close-button');
-            const offcanvasMenu = document.getElementById('offcanvas-menu');
-
-            menuButton.addEventListener('click', () => {
-                offcanvasMenu.classList.toggle('open');
-            });
-
-            closeButton.addEventListener('click', () => {
-                offcanvasMenu.classList.remove('open');
-            });
-
-            window.addEventListener('click', (e) => {
-                if (e.target === offcanvasMenu) {
-                    offcanvasMenu.classList.remove('open');
-                }
-            });
-        </script>
     </body>
 </html>
