@@ -154,9 +154,9 @@
     <nav class="flex flex-col p-4">
         <x-dash-links :href="route('dashboard')" :active="request()->routeIs('dashboard')">Dashboard</x-dash-links>
         <x-dash-links :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">Profile</x-dash-links>
-        <x-dash-links :href="route('inventory')" :active="request()->routeIs('inventory')">Inventory</x-dash-links>
-        <x-dash-links :href="route('order')" :active="request()->routeIs('order')">Order</x-dash-links>
-        <x-dash-links :href="route('procurement')" :active="request()->routeIs('procurement')">Procurement</x-dash-links>
+        {{-- <x-dash-links :href="route('inventory')" :active="request()->routeIs('inventory')">Inventory</x-dash-links> --}}
+        {{-- <x-dash-links :href="route('order')" :active="request()->routeIs('order')">Order</x-dash-links> --}}
+        {{-- <x-dash-links :href="route('procurement')" :active="request()->routeIs('procurement')">Procurement</x-dash-links> --}}
         <x-dash-links>
             <form action="{{ route('logout') }}" method="POST">
                 @csrf

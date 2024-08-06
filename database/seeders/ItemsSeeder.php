@@ -34,7 +34,7 @@ class ItemsSeeder extends Seeder
             ],
             [
                 'id' => 'ITM0003',
-                'name' => 'Arak',
+                'name' => 'Jamu',
                 'item_qty' => 0,
                 'supp_id' => 'SUB1',
                 'buy_price' => 20000.00,
@@ -43,7 +43,7 @@ class ItemsSeeder extends Seeder
             ],
             [
                 'id' => 'ITM0004',
-                'name' => 'Ciu',
+                'name' => 'Permen',
                 'item_qty' => 0,
                 'supp_id' => 'SUB1',
                 'buy_price' => 14000.00,
