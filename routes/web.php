@@ -1,20 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ItemController;
-use App\Http\Controllers\SupplierController;
-use App\Http\Controllers\RestockController;
+use App\Http\Controllers\SalesController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RestockController;
+use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\CreateUserController;
 use App\Http\Controllers\ItemAnalisisController;
 use App\Http\Controllers\AccountAnalisisController;
-use App\Http\Controllers\ReportController;
-use App\Http\Controllers\SalesController;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
