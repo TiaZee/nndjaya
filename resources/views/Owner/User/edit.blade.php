@@ -9,7 +9,7 @@
         <div class="w-full mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-black">
-                    <form action="{{ route('users.edit', $user->id) }}" method="POST">
+                    <form action="{{ route('users.update', $user->id) }}" method="POST">
                         @csrf
                         @method('PUT')
 
@@ -52,7 +52,7 @@
 
                     <!-- Link back to user list -->
                     <div class="mt-4">
-                        <a href="{{ route('create-user') }}" class="btn btn-secondary">
+                        <a href="{{ route('users.index') }}" class="btn btn-secondary">
                             {{ __('Back to Users') }}
                         </a>
                     </div>

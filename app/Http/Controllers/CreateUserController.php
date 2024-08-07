@@ -54,7 +54,7 @@ class CreateUserController extends Controller
         $user = User::findOrFail($id);
         $roles = Role::where('name', '!=', 'Owner')->get();
 
-        return view('users.edit', [
+        return view('owner.user.edit', [
             'user' => $user,
             'roles' => $roles
         ]);
