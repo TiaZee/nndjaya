@@ -51,6 +51,61 @@
 
                 <a href="#" class="underline underline-offset-4">Lihat permen</a>
             </div>
+            <div class="bg-pink-500 p-3 w-[200px]">
+                <h1 class="text-white text-xl pb-1">Permen lunak</h1>
+                <span class="text-xs text-gray-300 pb-3">
+                    Permen lunak adalah permen yang memiliki jenis lunak dan tidak membutuhkan upaya lebih untuk mengunyah
+                </span>
+                <br><br>
+
+                <a href="#" class="underline underline-offset-4">Lihat permen</a>
+            </div>
+            <div class="bg-pink-500 p-3 w-[200px]">
+                <h1 class="text-white text-xl pb-1">Permen lunak</h1>
+                <span class="text-xs text-gray-300 pb-3">
+                    Permen lunak adalah permen yang memiliki jenis lunak dan tidak membutuhkan upaya lebih untuk mengunyah
+                </span>
+                <br><br>
+
+                <a href="#" class="underline underline-offset-4">Lihat permen</a>
+            </div>
+            <div class="bg-pink-500 p-3 w-[200px]">
+                <h1 class="text-white text-xl pb-1">Permen lunak</h1>
+                <span class="text-xs text-gray-300 pb-3">
+                    Permen lunak adalah permen yang memiliki jenis lunak dan tidak membutuhkan upaya lebih untuk mengunyah
+                </span>
+                <br><br>
+
+                <a href="#" class="underline underline-offset-4">Lihat permen</a>
+            </div>
+            <div class="bg-pink-500 p-3 w-[200px]">
+                <h1 class="text-white text-xl pb-1">Permen lunak</h1>
+                <span class="text-xs text-gray-300 pb-3">
+                    Permen lunak adalah permen yang memiliki jenis lunak dan tidak membutuhkan upaya lebih untuk mengunyah
+                </span>
+                <br><br>
+
+                <a href="#" class="underline underline-offset-4">Lihat permen</a>
+            </div>
+            <div class="bg-pink-500 p-3 w-[200px]">
+                <h1 class="text-white text-xl pb-1">Permen lunak</h1>
+                <span class="text-xs text-gray-300 pb-3">
+                    Permen lunak adalah permen yang memiliki jenis lunak dan tidak membutuhkan upaya lebih untuk mengunyah
+                </span>
+                <br><br>
+
+                <a href="#" class="underline underline-offset-4">Lihat permen</a>
+            </div>
+            <div class="bg-pink-500 p-3 w-[200px]">
+                <h1 class="text-white text-xl pb-1">Permen lunak</h1>
+                <span class="text-xs text-gray-300 pb-3">
+                    Permen lunak adalah permen yang memiliki jenis lunak dan tidak membutuhkan upaya lebih untuk mengunyah
+                </span>
+                <br><br>
+
+                <a href="#" class="underline underline-offset-4">Lihat permen</a>
+            </div>
+            
         </div>
     </section>
 
