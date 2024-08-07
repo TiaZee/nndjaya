@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Role;
 
 class CreateUserController extends Controller
@@ -85,6 +86,15 @@ class CreateUserController extends Controller
     {
         $user = User::findOrFail($id);
         $user->delete();
+        // Mendapatkan ID tertinggi setelah penghapusan
+        $maxId = User::max('id');
+
+        // Jika tabel tidak kosong, reset auto-increment ke ID tertinggi
+        if ($maxId) {
+            DB::statement('ALTER TABLE users AUTO_INCREMENT = '.($maxId + 1));
+        } else {
+            DB::statement('ALTER TABLE users AUTO_INCREMENT = 1');
+        }
 
         return redirect()->route('users.index')->with('success', 'User successfully deleted');
     }
