@@ -34,6 +34,7 @@
                                 <th>Supplier</th>
                                 <th>Buy Price</th>
                                 <th>Sale Price</th>
+                                <th>Images</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -46,6 +47,13 @@
                                     <td>{{ $item->supplier->name }}</td> <!-- Assuming Supplier relationship -->
                                     <td class="format-number">{{ $item->buy_price }}</td>
                                     <td class="format-number">{{ $item->sale_price }}</td>
+                                    <td>
+                                        @if($item->item_photo)
+                                        <img src="{{ asset($item->item_photo) }}" alt="{{ $item->name }}" width="100">
+                                        @else
+                                        No Image
+                                        @endif
+                                    </td>
                                     <td>
                                         <a class="btn btn-warning btn-sm" href="{{ route('items.edit', $item->id) }}">Edit</a>
                                         <form action="{{ route('items.destroy', $item->id) }}" method="POST" style="display:inline;">

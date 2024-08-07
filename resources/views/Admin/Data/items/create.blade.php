@@ -54,7 +54,10 @@
                             <label for="sale_price">Sale Price:</label>
                             <input type="number" id="sale_price" name="sale_price" step="0.01" value="{{ old('sale_price') }}" required>
                         </div>
-
+                        <div>
+                            <label for="item_photo">Item Photo</label>
+                            <input id="item_photo" class="block mt-1 w-full" type="file" name="item_photo" />
+                        </div>
                         <button class="btn text-white" type="submit">Create Item</button>
                     </form>
                 </div>

@@ -26,14 +26,14 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
-                                    {{-- <td>
-                                        <a href="{{ route('sales.edit', $sale->id) }}" class="btn btn-warning">Edit</a>
-                                        <form action="{{ route('sales.destroy', $sale->id) }}" method="POST" style="display:inline;">
+                                    <td>
+                                        <a href="{{ route('create-user.edit', $user->id) }}" class="btn btn-warning">Edit</a>
+                                        <form action="{{ route('create-user.destroy', $user->id) }}" method="POST" style="display:inline;">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger">Delete</button>
                                         </form>
-                                    </td> --}}
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
