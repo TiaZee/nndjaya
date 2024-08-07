@@ -23,7 +23,7 @@
                     </div>
                 @endif
                 <div class="p-6 text-gray-900">
-                    <form action="{{ route('items.update', $item->id) }}" method="POST" class="space-y-4">
+                    <form action="{{ route('items.update', $item->id) }}" method="POST" class="space-y-4" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 

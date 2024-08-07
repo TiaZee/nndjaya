@@ -47,7 +47,7 @@
 
                 @if(isset($reportData))
                     <div class="mt-6">
-                        <h3 class="font-semibold text-lg">Report from {{ request('date_a') }} to {{ request('date_b') }}</h3>
+                        <h3 class="font-semibold text-lg text-black">Report from {{ request('date_a') }} to {{ request('date_b') }}</h3>
 
                         <table class="table-auto w-full mt-4">
                             <thead>
