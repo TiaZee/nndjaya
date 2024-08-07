@@ -29,27 +29,92 @@
     <br><br>
     <section id="products" style="margin-bottom: 5rem;">
         <center>
-            <h1 class="font-bold text-black text-3xl m-3">Jenis Produk</h1>
+            <h1 class="font-bold text-black text-3xl m-3">Produk</h1>
         </center>
-        <div class="flex justify-center gap-4">
-            <div class="bg-red-500 p-3 w-[200px]">
-                <h1 class="text-white text-xl pb-1">Permen keras</h1>
-                <span class="text-xs text-gray-300 pb-3">
-                    Permen keras adalah permen yang memiliki jenis keras dan butuh waktu untuk dapat dikunyah
-                </span>
-                <br><br>
-
-                <a href="#" class="underline underline-offset-4">Lihat permen</a>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6">
+            <div class="card bg-white w-full shadow-xl text-black">
+                <figure class="px-10 pt-10">
+                    <img
+                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    alt="Shoes"
+                    class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p>Rp. 50.000.000</p>
+                </div>
             </div>
-
-            <div class="bg-pink-500 p-3 w-[200px]">
-                <h1 class="text-white text-xl pb-1">Permen lunak</h1>
-                <span class="text-xs text-gray-300 pb-3">
-                    Permen lunak adalah permen yang memiliki jenis lunak dan tidak membutuhkan upaya lebih untuk mengunyah
-                </span>
-                <br><br>
-
-                <a href="#" class="underline underline-offset-4">Lihat permen</a>
+            <div class="card bg-white w-full shadow-xl text-black">
+                <figure class="px-10 pt-10">
+                    <img
+                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    alt="Shoes"
+                    class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p>Rp. 50.000.000</p>
+                </div>
+            </div>
+            <div class="card bg-white w-full shadow-xl text-black">
+                <figure class="px-10 pt-10">
+                    <img
+                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    alt="Shoes"
+                    class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p>Rp. 50.000.000</p>
+                </div>
+            </div>
+            <div class="card bg-white w-full shadow-xl text-black">
+                <figure class="px-10 pt-10">
+                    <img
+                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    alt="Shoes"
+                    class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p>Rp. 50.000.000</p>
+                </div>
+            </div>
+            <div class="card bg-white w-full shadow-xl text-black">
+                <figure class="px-10 pt-10">
+                    <img
+                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    alt="Shoes"
+                    class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p>Rp. 50.000.000</p>
+                </div>
+            </div>
+            <div class="card bg-white w-full shadow-xl text-black">
+                <figure class="px-10 pt-10">
+                    <img
+                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    alt="Shoes"
+                    class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p>Rp. 50.000.000</p>
+                </div>
+            </div>
+            <div class="card bg-white w-full shadow-xl text-black">
+                <figure class="px-10 pt-10">
+                    <img
+                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    alt="Shoes"
+                    class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p>Rp. 50.000.000</p>
+                </div>
             </div>
         </div>
     </section>
