@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('supp_id');
             $table->decimal('buy_price', 19, 2);
             $table->decimal('sale_price', 19, 2);
+            $table->string('item_photo')->nullable();
             $table->timestamps();
 
             // Foreign key constraint

@@ -17,7 +17,7 @@ class Item extends Model
     protected $keyType = 'string';
 
     // Specify fillable fields
-    protected $fillable = ['id', 'name', 'item_qty', 'supp_id', 'buy_price', 'sale_price'];
+    protected $fillable = ['id', 'name', 'item_qty', 'supp_id', 'buy_price', 'sale_price', 'item_photo'];
 
     public function supplier()
     {

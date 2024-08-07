@@ -25,7 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-     // Route to display the report form
+    // Route to display the report form
     Route::get('/report', [ReportController::class, 'index'])->name('report.index');
 
     Route::group(['middleware' => ['role:Admin|Owner']], function () {
@@ -68,9 +68,12 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::group(['middleware' => ['role:Owner']], function () {
-        Route::get('/create-user', [CreateUserController::class, 'home'])->name('create-user.home');
-        Route::get('/create-user/create', [CreateUserController::class, 'index'])->name('create-user');
-        Route::post('/create-user/create', [CreateUserController::class, 'store'])->name('create.post');
+        Route::get('/users', [CreateUserController::class, 'index'])->name('users.index');
+        Route::get('/users/create', [CreateUserController::class, 'create'])->name('users.create');
+        Route::post('/users', [CreateUserController::class, 'store'])->name('users.store');
+        Route::get('/users/{id}/edit', [CreateUserController::class, 'edit'])->name('users.edit');
+        Route::put('/users/{id}', [CreateUserController::class, 'update'])->name('users.update');
+        Route::delete('/users/{id}', [CreateUserController::class, 'destroy'])->name('users.destroy');
     });
 });
 

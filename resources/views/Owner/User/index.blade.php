@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-black">
                     <table class="table">
-                        <a href="{{ route('create-user') }}" class="btn text-white">Add User</a>
+                        <a href="{{ route('users.create') }}" class="btn text-white">Add User</a>
 
                         <thead class="text-black">
                             <tr>
@@ -26,14 +26,14 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
-                                    {{-- <td>
-                                        <a href="{{ route('sales.edit', $sale->id) }}" class="btn btn-warning">Edit</a>
-                                        <form action="{{ route('sales.destroy', $sale->id) }}" method="POST" style="display:inline;">
+                                    <td>
+                                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning">Edit</a>
+                                        <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline;">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger">Delete</button>
                                         </form>
-                                    </td> --}}
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
