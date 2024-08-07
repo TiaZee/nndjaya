@@ -10,14 +10,14 @@ class CreateUserController extends Controller
 {
     public function index()
     {
-        return view('Owner.index', [
+        return view('Owner.user.index', [
             'users' => User::all()
         ]);
     }
 
     public function create()
     {
-        return view('Owner.create', [
+        return view('Owner.user.create', [
             'roles' => Role::where('name', '!=', 'Owner')->get(),
         ]);
     }
@@ -46,7 +46,7 @@ class CreateUserController extends Controller
             $user->assignRole('Accountant');
         }
 
-        return redirect()->back()->with('success', 'User successfully Added');
+        return redirect()->route('users.index')->with('success', 'User successfully Added');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class CreateUserController extends Controller
         $user = User::findOrFail($id);
         $roles = Role::where('name', '!=', 'Owner')->get();
 
-        return view('owner.edit', [
+        return view('users.edit', [
             'user' => $user,
             'roles' => $roles
         ]);
@@ -78,7 +78,7 @@ class CreateUserController extends Controller
 
         $user->save();
 
-        return redirect()->route('create-user')->with('success', 'User successfully updated');
+        return redirect()->route('users.index')->with('success', 'User successfully updated');
     }
 
     public function destroy($id)
@@ -86,6 +86,6 @@ class CreateUserController extends Controller
         $user = User::findOrFail($id);
         $user->delete();
 
-        return redirect()->route('create-user')->with('success', 'User successfully deleted');
+        return redirect()->route('users.index')->with('success', 'User successfully deleted');
     }
 }

@@ -33,7 +33,7 @@
                             {{ session('error') }}
                         </div>
                         @endif
-                        <form method="POST" action="{{ route('create.post') }}" class="space-y-4">
+                        <form method="POST" action="{{ route('users.store') }}" class="space-y-4">
                             @csrf
                             <div class="form-group">
                                 <label for="name">Name</label>

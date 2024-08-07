@@ -34,7 +34,7 @@
                         </x-dash-links>
                     </li>
                     <li>
-                        <x-dash-links :href="route('create-user.home')" :active="request()->routeIs('create-user.home')">
+                        <x-dash-links :href="route('users.index')" :active="request()->routeIs('users.index')">
                             <div class="flex">
                                 <div class="icons">
                                     <i class="fa-solid fa-users"></i>
@@ -156,7 +156,7 @@
                     </li>
                     <li>
                         <div class="tooltip tooltip-right w-full" data-tip="Users">
-                            <x-dash-links :href="route('create-user.home')" :active="request()->routeIs('create-user.home')">
+                            <x-dash-links :href="route('users.index')" :active="request()->routeIs('users.index')">
                                 <center>
                                     <i class="fa-solid fa-users"></i>
                                 </center>

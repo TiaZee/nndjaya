@@ -9,7 +9,7 @@
         <div class="w-full mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-black">
-                    <form action="{{ route('create-user.edit', $user->id) }}" method="POST">
+                    <form action="{{ route('users.edit', $user->id) }}" method="POST">
                         @csrf
                         @method('PUT')
 
