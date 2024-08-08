@@ -3,7 +3,7 @@
     <section id="slider">
         @include('Landing.slider-home')
     </section>
-    <section id="content" class="text-black p-4 font-bold">
+    <section id="about" class="text-black p-4 font-bold">
         <center>
             <h1 class="font-bold text-black text-3xl m-3">About Us</h1>
         </center>
@@ -12,7 +12,8 @@
                 {{-- <img
                 class=""
                 src="https://images.unsplash.com/photo-1573332775719-8995fd305918?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> --}}
-                <img src="https://images.unsplash.com/photo-1600267188229-1dd3dd776737?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                {{-- <img src="https://images.unsplash.com/photo-1600267188229-1dd3dd776737?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> --}}
+                <img src="https://images.unsplash.com/photo-1499195333224-3ce974eecb47?q=80&w=1502&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
             </div>
             <div class="w-[50%] p-[1.3rem] text-black">
                 <p>
@@ -29,154 +30,76 @@
     <br><br>
     <section id="products" style="margin-bottom: 5rem;">
         <center>
-            <h1 class="font-bold text-black text-3xl m-3">Produk</h1>
+            <h1 class="font-bold text-black text-3xl mb-6">Produk</h1>
         </center>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6 p-6">
             <div class="card bg-white w-full shadow-xl text-black">
                 <figure class="px-10 pt-10">
                     <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    src="https://images.unsplash.com/photo-1519686997393-7bdb73d6c54d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Shoes"
                     class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                    <h2 class="card-title">Shoes!</h2>
+                    <h2 class="card-title">Candy!</h2>
                     <p>Rp. 50.000.000</p>
                 </div>
             </div>
             <div class="card bg-white w-full shadow-xl text-black">
                 <figure class="px-10 pt-10">
                     <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    src="https://images.unsplash.com/photo-1519686997393-7bdb73d6c54d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Shoes"
                     class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                    <h2 class="card-title">Shoes!</h2>
+                    <h2 class="card-title">Candy!</h2>
                     <p>Rp. 50.000.000</p>
                 </div>
             </div>
             <div class="card bg-white w-full shadow-xl text-black">
                 <figure class="px-10 pt-10">
                     <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    src="https://images.unsplash.com/photo-1519686997393-7bdb73d6c54d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Shoes"
                     class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                    <h2 class="card-title">Shoes!</h2>
+                    <h2 class="card-title">Candy!</h2>
                     <p>Rp. 50.000.000</p>
                 </div>
             </div>
             <div class="card bg-white w-full shadow-xl text-black">
                 <figure class="px-10 pt-10">
                     <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    src="https://images.unsplash.com/photo-1519686997393-7bdb73d6c54d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Shoes"
                     class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                    <h2 class="card-title">Shoes!</h2>
+                    <h2 class="card-title">Candy!</h2>
                     <p>Rp. 50.000.000</p>
                 </div>
             </div>
             <div class="card bg-white w-full shadow-xl text-black">
                 <figure class="px-10 pt-10">
                     <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    src="https://images.unsplash.com/photo-1519686997393-7bdb73d6c54d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Shoes"
                     class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                    <h2 class="card-title">Shoes!</h2>
+                    <h2 class="card-title">Candy!</h2>
                     <p>Rp. 50.000.000</p>
                 </div>
             </div>
-            <div class="card bg-white w-full shadow-xl text-black">
-                <figure class="px-10 pt-10">
-                    <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                    alt="Shoes"
-                    class="rounded-xl" />
-                </figure>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">Shoes!</h2>
-                    <p>Rp. 50.000.000</p>
-                </div>
-            </div>
-            <div class="card bg-white w-full shadow-xl text-black">
-                <figure class="px-10 pt-10">
-                    <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                    alt="Shoes"
-                    class="rounded-xl" />
-                </figure>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">Shoes!</h2>
-                    <p>Rp. 50.000.000</p>
-                </div>
-            </div>
-            <div class="bg-pink-500 p-3 w-[200px]">
-                <h1 class="text-white text-xl pb-1">Permen lunak</h1>
-                <span class="text-xs text-gray-300 pb-3">
-                    Permen lunak adalah permen yang memiliki jenis lunak dan tidak membutuhkan upaya lebih untuk mengunyah
-                </span>
-                <br><br>
 
-                <a href="#" class="underline underline-offset-4">Lihat permen</a>
-            </div>
-            <div class="bg-pink-500 p-3 w-[200px]">
-                <h1 class="text-white text-xl pb-1">Permen lunak</h1>
-                <span class="text-xs text-gray-300 pb-3">
-                    Permen lunak adalah permen yang memiliki jenis lunak dan tidak membutuhkan upaya lebih untuk mengunyah
-                </span>
-                <br><br>
-
-                <a href="#" class="underline underline-offset-4">Lihat permen</a>
-            </div>
-            <div class="bg-pink-500 p-3 w-[200px]">
-                <h1 class="text-white text-xl pb-1">Permen lunak</h1>
-                <span class="text-xs text-gray-300 pb-3">
-                    Permen lunak adalah permen yang memiliki jenis lunak dan tidak membutuhkan upaya lebih untuk mengunyah
-                </span>
-                <br><br>
-
-                <a href="#" class="underline underline-offset-4">Lihat permen</a>
-            </div>
-            <div class="bg-pink-500 p-3 w-[200px]">
-                <h1 class="text-white text-xl pb-1">Permen lunak</h1>
-                <span class="text-xs text-gray-300 pb-3">
-                    Permen lunak adalah permen yang memiliki jenis lunak dan tidak membutuhkan upaya lebih untuk mengunyah
-                </span>
-                <br><br>
-
-                <a href="#" class="underline underline-offset-4">Lihat permen</a>
-            </div>
-            <div class="bg-pink-500 p-3 w-[200px]">
-                <h1 class="text-white text-xl pb-1">Permen lunak</h1>
-                <span class="text-xs text-gray-300 pb-3">
-                    Permen lunak adalah permen yang memiliki jenis lunak dan tidak membutuhkan upaya lebih untuk mengunyah
-                </span>
-                <br><br>
-
-                <a href="#" class="underline underline-offset-4">Lihat permen</a>
-            </div>
-            <div class="bg-pink-500 p-3 w-[200px]">
-                <h1 class="text-white text-xl pb-1">Permen lunak</h1>
-                <span class="text-xs text-gray-300 pb-3">
-                    Permen lunak adalah permen yang memiliki jenis lunak dan tidak membutuhkan upaya lebih untuk mengunyah
-                </span>
-                <br><br>
-
-                <a href="#" class="underline underline-offset-4">Lihat permen</a>
-            </div>
-            
         </div>
     </section>
 
     <section id="olshop" style="margin-bottom: 5rem;">
         <center>
-            <h1 class="font-bold text-black text-3xl m-3">Our Online shops</h1>
+            <h1 class="font-bold text-black text-3xl mb-6">Our Online shops</h1>
         </center>
         <div class="flex justify-center gap-2">
             <a href="" class="btn bg-black text-white outline-none border-none">
@@ -194,7 +117,7 @@
 
     <section id="location" style="margin-bottom: 5rem;">
         <center>
-            <h1 class="font-bold text-black text-3xl m-3">Our Location</h1>
+            <h1 class="font-bold text-black text-3xl mb-6">Our Location</h1>
         </center>
 
         <div class="flex justify-center w-full">
