@@ -6,10 +6,10 @@
             </div>
 
             <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 bg-white">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#contact">Contact us</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Product</a></li>
+                <li><a href="#olshop">Online Shop</a></li>
+                <li><a href="#location">Location</a></li>
             </ul>
         </div>
         <div class="flex items-center justify-center h-16 gap-2">
@@ -19,10 +19,10 @@
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-            <li><a class="font-bold text-[15.5px]" href="#">Home</a></li>
-            <li><a class="font-bold text-[15.5px]" href="#">Product</a></li>
-            <li><a class="font-bold text-[15.5px]" href="#">About us</a></li>
-            <li><a class="font-bold text-[15.5px]" href="#contact">Contact us</a></li>
+            <li><a class="font-bold text-[15.5px]" href="#about">About Us</a></li>
+            <li><a class="font-bold text-[15.5px]" href="#products">Product</a></li>
+            <li><a class="font-bold text-[15.5px]" href="#olshop">About us</a></li>
+            <li><a class="font-bold text-[15.5px]" href="#location">Location</a></li>
         </ul>
     </div>
     <div class="navbar-end">

@@ -10,7 +10,20 @@
         <div class="w-full mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <p>hi {{ Auth::user()->role }}</p>
+                    <div class="flex gap-5">
+                        <div class="w-[160px]  bg-green-500 p-3 text-white">
+                            <h1 class="text-md font-bold">BARANG PALING LARIS</h1>
+                            <span>0</span>
+                        </div>
+                        <div class="w-[160px] bg-yellow-500 p-3 text-white">
+                            <h1 class="text-md font-bold">iTEMS</h1>
+                            <span>0</span>
+                        </div>
+                        <div class="w-[160px] bg-red-500 p-3 text-white">
+                            <h1 class="text-md font-bold">SALES</h1>
+                            <span>0</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
