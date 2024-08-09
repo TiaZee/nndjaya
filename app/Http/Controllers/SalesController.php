@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Sales;
 use App\Models\Item;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class SalesController extends Controller
 {
@@ -116,5 +117,43 @@ class SalesController extends Controller
         $sale->delete();
 
         return redirect()->route('sales.index')->with('success', 'Sales Deleted Successfully.');
+    }
+
+    public function showReceipt($id)
+    {
+        $sale = Sales::findOrFail($id);
+        $data = [
+            'title' => 'Nota Penjualan',
+            'subtitle' => 'NN Djaya Snack',
+            'restock_id' => $sale->id,
+            'buyer_name' => $sale->buyer_name,
+            'address' => $sale->buyer_address,
+            'billed' => $sale->updated_at->format('d-m-Y'),
+            'item_name' => $sale->name_item,
+            'item_quantity' => $sale->sale_qty,
+            'price' => $sale->sale_price,
+            'total' => $sale->sale_total,
+        ];
+
+        return view('admin.sales.receipt-preview', $data);
+    }
+
+    public function printReceipt($id)
+    {
+        $sale = Sales::findOrFail($id);
+        $data = [
+            'title' => 'Receipt',
+            'subtitle' => 'NN Djaya Snack',
+            'restock_id' => $sale->id,
+            'buyer_name' => $sale->buyer_name,
+            'address' => $sale->buyer_address,
+            'billed' => $sale->updated_at->format('d-m-Y'),
+            'item_name' => $sale->name_item,
+            'item_quantity' => $sale->sale_qty,
+            'price' => $sale->sale_price,
+            'total' => $sale->sale_total,
+        ];
+        $pdf = PDF::loadView('admin.sales.receipt', $data);
+        return $pdf->download('receipt_' . $sale->id . '.pdf');
     }
 }

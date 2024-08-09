@@ -59,6 +59,10 @@ Route::middleware('auth')->group(function () {
         Route::get('/sales/{id}/edit', [SalesController::class, 'edit'])->name('sales.edit');
         Route::put('/sales/{id}', [SalesController::class, 'update'])->name('sales.update');
         Route::delete('/sales/{id}', [SalesController::class, 'destroy'])->name('sales.destroy');
+        // Menampilkan tanda terima
+        Route::get('/sales/{id}/receipt', [SalesController::class, 'showReceipt'])->name('sales.receipt');
+        // Mengunduh PDF setelah konfirmasi
+        Route::get('/sales/{id}/receipt/print', [SalesController::class, 'printReceipt'])->name('sales.receipt.print');
     });
 
     Route::group(['middleware' => ['role:Accountant|Owner']], function () {

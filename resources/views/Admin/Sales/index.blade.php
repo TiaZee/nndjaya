@@ -60,6 +60,8 @@
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger">Delete</button>
                                     </form>
+                                    <a href="{{ route('sales.receipt', $sale->id) }}" class="btn btn-info">View Receipt</a>
+
                                 </td>
                             </tr>
                         @endforeach
