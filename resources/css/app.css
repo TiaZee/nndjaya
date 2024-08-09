@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    scroll-behavior: smooth !important;
+}
+
 /* Tambahkan kelas untuk menyembunyikan sidebar */
 .hidden {
     transform: translateX(-100%) !important;
