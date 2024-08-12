@@ -31,7 +31,7 @@
                 </form>
 
                 <!-- Include Flatpickr JS -->
-                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>  
                 <script>
                     document.addEventListener('DOMContentLoaded', function() {
                         flatpickr("#date_a", {
