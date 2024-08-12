@@ -80,9 +80,9 @@ class RestockController extends Controller
         $item = Item::find($request->item_id);
 
         // Revert the previous item quantity
-        $previousItem = Item::find($restock->item_id);
-        $previousItem->item_qty -= $restock->buy_qty;
-        $previousItem->save();
+        $item = Item::find($restock->item_id);
+        $item->item_qty -= $restock->buy_qty;
+        $item->save();
 
         $restock->supp_id = $supplier->id;
         $restock->supp_name = $supplier->name;
