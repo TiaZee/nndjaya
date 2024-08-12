@@ -83,10 +83,10 @@ class SalesController extends Controller
         $sales = Sales::findOrFail($id);
         $item = Item::find($request->item_id);
 
-        // Revert the previous item quantity
-        $previousItem = Item::find($sales->item_id);
-        $previousItem->item_qty += $sales->sale_qty;
-        $previousItem->save();
+        // Revert the item quantity
+        $item = Item::find($sales->item_id);
+        $item->item_qty += $sales->sale_qty;
+        $item->save();
 
         // Update sale
         $sales->buyer_name = $request->buyer_name;

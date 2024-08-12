@@ -20,7 +20,7 @@ class ItemsSeeder extends Seeder
                 'item_qty' => 0,
                 'supp_id' => 'MLG1',
                 'buy_price' => 10000.00,
-                'sale_price' => 10000.00,
+                'sale_price' => 12000.00,
 
             ],
             [
