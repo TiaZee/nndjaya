@@ -130,9 +130,9 @@ class SalesController extends Controller
             'address' => $sale->buyer_address,
             'billed' => $sale->updated_at->format('d-m-Y'),
             'item_name' => $sale->name_item,
-            'item_quantity' => $sale->sale_qty,
-            'price' => $sale->sale_price,
-            'total' => $sale->sale_total,
+            'item_quantity' => number_format($sale->sale_qty, 0, ',', '.'),
+            'price' => number_format($sale->sale_price, 2, ',', '.'),
+            'total' => number_format($sale->sale_total, 2, ',', '.'),
         ];
 
         return view('admin.sales.receipt-preview', $data);
@@ -149,9 +149,9 @@ class SalesController extends Controller
             'address' => $sale->buyer_address,
             'billed' => $sale->updated_at->format('d-m-Y'),
             'item_name' => $sale->name_item,
-            'item_quantity' => $sale->sale_qty,
-            'price' => $sale->sale_price,
-            'total' => $sale->sale_total,
+            'item_quantity' => number_format($sale->sale_qty, 0, ',', '.'),
+            'price' => number_format($sale->sale_price, 2, ',', '.'),
+            'total' => number_format($sale->sale_total, 2, ',', '.'),
         ];
         $pdf = PDF::loadView('admin.sales.receipt', $data);
         return $pdf->download('receipt_' . $sale->id . '.pdf');

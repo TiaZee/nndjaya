@@ -42,7 +42,7 @@ class ReportController extends Controller
 
                 // Calculate current stock value and profit
                 $currentStockValue = $item->item_qty * $item->sale_price;
-                $soldoutprofit = ($moneyEarned - $moneySpent)+$currentStockValue;
+                $soldoutprofit = ($moneyEarned - $moneySpent) + $currentStockValue;
                 $profit = $moneyEarned - $moneySpent;
 
                 return [
@@ -99,14 +99,14 @@ class ReportController extends Controller
 
                 return [
                     'item_name' => $item->name,
-                    'restock_quantity' => $restockQuantity,
-                    'money_spent' => $moneySpent,
-                    'sale_quantity' => $saleQuantity,
-                    'money_earned' => $moneyEarned,
-                    'item_quantity' => $item->item_qty,
-                    'current_stock_value' => $currentStockValue,
-                    'sold_out_profit' => $soldoutprofit,
-                    'profit' => $profit,
+                    'restock_quantity' => number_format($restockQuantity, 0, ',', '.'),
+                    'money_spent' => number_format($moneySpent, 2, ',', '.'),
+                    'sale_quantity' => number_format($saleQuantity, 0, ',', '.'),
+                    'money_earned' => number_format($moneyEarned, 2, ',', '.'),
+                    'item_quantity' => number_format($item->item_qty, 0, ',', '.'),
+                    'current_stock_value' => number_format($currentStockValue, 2, ',', '.'),
+                    'sold_out_profit' => number_format($soldoutprofit, 2, ',', '.'),
+                    'profit' => number_format($profit, 2, ',', '.'),
                 ];
             });
 
