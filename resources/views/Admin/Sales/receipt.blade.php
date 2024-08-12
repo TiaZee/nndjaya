@@ -6,8 +6,27 @@
     <title>{{ $title }}</title>
 </head>
 <body>
-    <h1>{{ $title }}</h1>
-    <h2>{{ $subtitle }}</h2>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+    <center>
+        <h1>{{ $title }}</h1>
+        <h2>{{ $subtitle }}</h2>
+    </center>
 
     <div> <!-- Container Receipt  -->
         <div> <!-- top  -->
@@ -17,7 +36,7 @@
             <p><strong>Billed:</strong> {{ $billed }}</p>
         </div>
         <div> <!-- mid (table)  -->
-            <table>
+            <table border="1">
                 <thead>
                     <tr>
                         <th>Item Name</th>
