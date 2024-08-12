@@ -26,6 +26,7 @@ Route::middleware('auth')->group(function () {
 
     // Route to display the report form
     Route::get('/report', [ReportController::class, 'index'])->name('report.index');
+    Route::get('/report/pdf', [ReportController::class, 'exportPdf'])->name('report.pdf');
 
     Route::group(['middleware' => ['role:Admin|Owner']], function () {
         // Route to display the list of suppliers
