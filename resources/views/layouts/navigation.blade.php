@@ -202,7 +202,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="tooltip tooltip-right w-full" data-tip="Sales">
+                        <div class="tooltip tooltip-right w-full" data-tip="Report">
                             <x-dash-links :href="route('report.index')" :active="request()->routeIs('report.index')">
                                 <center>
                                     <i class="fa-solid fa-book"></i>

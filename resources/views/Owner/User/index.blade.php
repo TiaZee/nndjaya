@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-black">
                     <table class="table">
-                        <a href="{{ route('users.create') }}" class="btn text-white">Add User</a>
+                        <a href="{{ route('users.create') }}" class="btn btn-success text-white mb-5">Add User</a>
 
                         <thead class="text-black">
                             <tr>

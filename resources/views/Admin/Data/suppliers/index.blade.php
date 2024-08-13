@@ -24,7 +24,7 @@
                 @endif
                 <div class="p-6 text-gray-900 space-y-4">
 
-                    <a href="{{ route('suppliers.create') }}" class="btn btn-black text-white">Create New Supplier</a>
+                    <a href="{{ route('suppliers.create') }}" class="btn btn-success text-white">Create New Supplier</a>
 
                     @if(session('success'))
                         <div class="alert alert-success">

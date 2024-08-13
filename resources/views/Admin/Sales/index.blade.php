@@ -25,7 +25,7 @@
 
                     </div>
                 @endif
-                <a href="{{ route('sales.create') }}" class="btn text-white">Add Sale</a>
+                <a href="{{ route('sales.create') }}" class="btn btn-success text-white">Add Sale</a>
                 <table class="table">
                     <thead class="text-black">
                         <tr>
@@ -53,14 +53,14 @@
                                 <td class="format-number">{{ $sale->sale_total }}</td>
                                 <td>{{ $sale->created_at }}</td>
                                 <td>{{ $sale->updated_at }}</td>
-                                <td class="flex gap-1">
-                                    <a href="{{ route('sales.edit', $sale->id) }}" class="btn btn-warning">Edit</a>
+                                <td class="flex flex-wrap gap-1">
+                                    <a href="{{ route('sales.edit', $sale->id) }}" class="btn btn-warning btn-sm">Edit</a>
                                     <form action="{{ route('sales.destroy', $sale->id) }}" method="POST" style="display:inline;">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                                     </form>
-                                    <a href="{{ route('sales.receipt', $sale->id) }}" class="btn btn-info">View Receipt</a>
+                                    <a href="{{ route('sales.receipt', $sale->id) }}" class="btn btn-info btn-sm">View Receipt</a>
 
                                 </td>
                             </tr>

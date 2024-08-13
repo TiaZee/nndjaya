@@ -23,7 +23,7 @@
                     </div>
                 @endif
                 <div class="p-6 text-gray-900 space-y-4">
-                    <a class="btn text-white" href="{{ route('items.create') }}">Add New Item</a>
+                    <a class="btn btn-success text-white" href="{{ route('items.create') }}">Add New Item</a>
 
                     <table class="table mt-4 text-black">
                         <thead class="text-black">

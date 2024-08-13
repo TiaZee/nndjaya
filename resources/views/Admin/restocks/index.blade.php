@@ -20,7 +20,7 @@
                         </div>
                     </div>
                 @endif
-                <a href="{{ route('restocks.create') }}" class="btn text-white">Add Restock</a>
+                <a href="{{ route('restocks.create') }}" class="btn btn-success text-white">Add Restock</a>
                 <table class="table">
                     <thead class="text-black">
                         <tr>

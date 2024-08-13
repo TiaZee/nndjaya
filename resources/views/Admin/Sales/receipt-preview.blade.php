@@ -7,15 +7,44 @@
 
     <div class="py-12">
         <div class="w-full mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6 space-y-4">
-                <h1>{{ $title }}</h1>
-                <h2>{{ $subtitle }}</h2>
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6 space-y-4 text-black">
+                <center class="font-bold mb-8">
+                    <h1 class="text-lg">{{ $title }}</h1>
+                    <hr>
+                    <h2 class="text-sm text-gray-500">{{ $subtitle }}</h2>
+                </center>
                 <div> <!-- Container Receipt  -->
                     <div> <!-- top  -->
-                        <p><strong>Restock ID:</strong> {{ $restock_id }}</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="font-bold">Restock ID</td>
+                                    <td class="px-2">:</td>
+                                    <td>{{ $restock_id }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-bold">Buyer Name</td>
+                                    <td class="px-2">:</td>
+                                    <td>{{ $buyer_name }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-bold">Address</td>
+                                    <td class="px-2">:</td>
+                                    <td>{{ $address }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-bold">Billed</td>
+                                    <td class="px-2">:</td>
+                                    <td>{{ $billed }}</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                        {{-- <p><strong>Restock ID:</strong> {{ $restock_id }}</p>
                         <p><strong>Buyer Name:</strong> {{ $buyer_name }}</p>
                         <p><strong>Address:</strong> {{ $address }}</p>
-                        <p><strong>Billed:</strong> {{ $billed }}</p>
+                        <p><strong>Billed:</strong> {{ $billed }}</p> --}}
                     </div>
                     <div class="mt-5 mb-5"> <!-- mid (table)  -->
                         <table class="table">
@@ -35,7 +64,7 @@
                                     <td>{{ $total }}</td>
                                 </tr>
                             </tbody>
-                            <td>Sub Total</td>
+                            <td class="font-bold">Sub Total:</td>
                             <td>{{ $total }}</td>
                         </table>
                     </div>
