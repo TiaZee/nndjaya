@@ -24,7 +24,11 @@
                 @endif
                 <div class="p-6 text-gray-900 space-y-4">
 
-                    <a href="{{ route('suppliers.create') }}" class="btn btn-success text-white">Create New Supplier</a>
+                    <div class="flex justify-between items-center mb-4">
+                        <a href="{{ route('suppliers.create') }}" class="btn btn-success text-white">Create New Supplier</a>
+                        <input type="text" id="searchInput" placeholder="Search..." class="px-4 py-2 border rounded-lg w-1/3">
+                    </div>
+
 
                     @if(session('success'))
                         <div class="alert alert-success">
@@ -68,7 +72,7 @@
                                         <form action="{{ route('suppliers.destroy', $supplier->id) }}" method="POST" style="display:inline;">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</button>
+                                            <button type="submit" class="btn btn-error text-white btn-sm" onclick="return confirm('Are you sure?')">Delete</button>
                                         </form>
                                     </td>
                                 </tr>

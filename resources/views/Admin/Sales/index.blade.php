@@ -25,7 +25,10 @@
 
                     </div>
                 @endif
-                <a href="{{ route('sales.create') }}" class="btn btn-success text-white">Add Sale</a>
+                <div class="flex justify-between items-center mb-4">
+                    <a href="{{ route('sales.create') }}" class="btn btn-success text-white">Add Sale</a>
+                    <input type="text" id="searchInput" placeholder="Search..." class="px-4 py-2 border rounded-lg w-1/3">
+                </div>
                 <table class="table">
                     <thead class="text-black">
                         <tr>
@@ -58,7 +61,7 @@
                                     <form action="{{ route('sales.destroy', $sale->id) }}" method="POST" style="display:inline;">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                        <button type="submit" class="btn btn-error text-white btn-sm">Delete</button>
                                     </form>
                                     <a href="{{ route('sales.receipt', $sale->id) }}" class="btn btn-info btn-sm">View Receipt</a>
 

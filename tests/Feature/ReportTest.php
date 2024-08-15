@@ -3,7 +3,7 @@
 use App\Models\User;
 
 
-test('Halaman User ditampilkan', function () {
+test('Halaman Report ditampilkan', function () {
     // Buat user dan login
     $user = User::factory()->create();
 

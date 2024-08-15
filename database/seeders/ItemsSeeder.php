@@ -30,7 +30,6 @@ class ItemsSeeder extends Seeder
                 'supp_id' => 'MLG1',
                 'buy_price' => 8000.00,
                 'sale_price' => 9500.00,
-
             ],
             [
                 'id' => 'ITM0003',

@@ -10,7 +10,10 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-black">
                     <table class="table">
-                        <a href="{{ route('users.create') }}" class="btn btn-success text-white mb-5">Add User</a>
+                        <div class="flex justify-between items-center mb-4">
+                            <a href="{{ route('users.create') }}" class="btn btn-success text-white mb-5">Add User</a>
+                            <input type="text" id="searchInput" placeholder="Search..." class="px-4 py-2 border rounded-lg w-1/3">
+                        </div>
 
                         <thead class="text-black">
                             <tr>
@@ -31,7 +34,7 @@
                                         <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline;">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                            <button type="submit" class="btn btn-error text-white">Delete</button>
                                         </form>
                                     </td>
                                 </tr>

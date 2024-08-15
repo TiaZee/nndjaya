@@ -23,8 +23,11 @@
                     </div>
                 @endif
                 <div class="p-6 text-gray-900 space-y-4">
-                    <a class="btn btn-success text-white" href="{{ route('items.create') }}">Add New Item</a>
 
+                    <div class="flex justify-between items-center mb-4">
+                        <a class="btn btn-success text-white" href="{{ route('items.create') }}">Add New Item</a>
+                        <input type="text" id="searchInput" placeholder="Search..." class="px-4 py-2 border rounded-lg w-1/3">
+                    </div>
                     <table class="table mt-4 text-black">
                         <thead class="text-black">
                             <tr>
@@ -59,7 +62,7 @@
                                         <form action="{{ route('items.destroy', $item->id) }}" method="POST" style="display:inline;">
                                             @csrf
                                             @method('DELETE')
-                                            <button class="btn btn-danger btn-sm" type="submit" onclick="return confirm('Are you sure?')">Delete</button>
+                                            <button class="btn btn-error text-white btn-sm" type="submit" onclick="return confirm('Are you sure?')">Delete</button>
                                         </form>
                                     </td>
                                 </tr>
@@ -69,6 +72,17 @@
                 </div>
             </div>
         </div>
+        {{-- <script>
+            document.getElementById('searchInput').addEventListener('keyup', function() {
+                let filter = this.value.toLowerCase();
+                let rows = document.querySelectorAll('table tbody tr');
+
+                rows.forEach(row => {
+                    let text = row.textContent.toLowerCase();
+                    row.style.display = text.includes(filter) ? '' : 'none';
+                });
+            });
+        </script> --}}
     </div>
 
 </x-app-layout>
