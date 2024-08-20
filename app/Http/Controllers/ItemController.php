@@ -114,4 +114,13 @@ class ItemController extends Controller
 
         return redirect()->route('items.index')->with('success', 'Item deleted successfully.');
     }
+
+    public function getItemQuantity($id)
+{
+        $item = Item::find($id);
+        if ($item) {
+            return response()->json(['item_qty' => $item->item_qty]);
+        }
+        return response()->json(['item_qty' => 0], 404);
+    }
 }

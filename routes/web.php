@@ -46,6 +46,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/items/{id}/edit', [ItemController::class, 'edit'])->name('items.edit');
         Route::put('/items/{id}', [ItemController::class, 'update'])->name('items.update');
         Route::delete('/items/{id}', [ItemController::class, 'destroy'])->name('items.destroy');
+        Route::get('/items/{id}/quantity', [ItemController::class, 'getItemQuantity']);
 
         // Route to display the Restock form
         Route::get('/restocks', [RestockController::class, 'index'])->name('restocks.index');

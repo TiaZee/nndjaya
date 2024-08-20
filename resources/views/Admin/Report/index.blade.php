@@ -7,8 +7,8 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="w-full mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6">
+        <div class="mx-auto">
+            <div class="bg-white shadow-xl sm:rounded-lg p-6" id="dash-content">
                 <!-- Include Flatpickr CSS -->
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
@@ -81,13 +81,13 @@
                             </tbody>
                         </table>
                     </div>
+                    <!-- Tombol Cetak PDF -->
+                    <a href="{{ route('report.pdf', ['date_a' => request('date_a'), 'date_b' => request('date_b')]) }}" class="m-4 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        Print to PDF
+                    </a>
                 @endif
 
             </div>
-            <!-- Tombol Cetak PDF -->
-            <a href="{{ route('report.pdf', ['date_a' => request('date_a'), 'date_b' => request('date_b')]) }}" class="mt-4 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                Print to PDF
-            </a>
 
         </div>
     </div>
