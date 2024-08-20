@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', 'Sales')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Sales') }}
@@ -11,7 +12,7 @@
 
     <div class="py-12">
         <div class="w-full mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6 space-y-4">
+            <div class="bg-white shadow-xl sm:rounded-lg p-6 space-y-4" id="dash-content">
                 @if (session('success'))
                     <div role="alert" class="alert alert-success rounded-none">
                         <div class="flex items-center justify-center gap-2">
@@ -63,7 +64,7 @@
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-error text-white btn-sm">Delete</button>
                                     </form>
-                                    <a href="{{ route('sales.receipt', $sale->id) }}" class="btn btn-info btn-sm">View Receipt</a>
+                                    <a href="{{ route('sales.receipt', $sale->id) }}" class="btn btn-info text-white btn-sm">View Receipt</a>
 
                                 </td>
                             </tr>

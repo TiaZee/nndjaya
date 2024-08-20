@@ -58,6 +58,10 @@ const swiper = new Swiper(".swiper", {
         el: ".swiper-pagination",
         clickable: true,
         dynamicBullets: true,
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
     },
     navigation: {
         nextEl: ".swiper-button-next",

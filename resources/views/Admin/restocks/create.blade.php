@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', 'Create Restock')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Create Restock') }}
@@ -46,7 +47,7 @@
                     </div>
 
                     <div class="flex items-center justify-end mt-4">
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-success text-white">
                             {{ __('Save') }}
                         </button>
                     </div>

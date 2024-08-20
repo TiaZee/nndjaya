@@ -1,5 +1,6 @@
 <!-- resources/views/items/create.blade.php -->
 <x-app-layout>
+    @section('title', 'Add New Item')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Create Item') }}
@@ -54,11 +55,11 @@
                             <label for="sale_price">Sale Price:</label>
                             <input type="number" id="sale_price" name="sale_price" step="0.01" value="{{ old('sale_price') }}" required>
                         </div>
-                        <div>
+                        <div class="form-control">
                             <label for="item_photo">Item Photo</label>
-                            <input id="item_photo" class="block mt-1 w-full" type="file" name="item_photo" />
+                            <input id="item_photo" class="file-input file-input-bordered block mt-1 w-full" type="file" name="item_photo" />
                         </div>
-                        <button class="btn text-white" type="submit">Create Item</button>
+                        <button class="btn btn-success text-white" type="submit">Create Item</button>
                     </form>
                 </div>
             </div>

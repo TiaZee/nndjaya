@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', 'Add New Supplier')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Create Supplier') }}
@@ -51,7 +52,7 @@
                             <input type="text" id="bank_number" name="bank_number" value="{{ old('bank_number') }}">
                         </div>
                         <div>
-                            <button class="btn" type="submit">Create Supplier</button>
+                            <button class="btn btn-success text-white" type="submit">Create Supplier</button>
                         </div>
                     </form>
 

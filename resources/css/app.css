@@ -57,3 +57,30 @@
     object-fit: cover;
 }
 
+@media (max-width: 600px) {
+    #sidebar{
+        display: none;
+    }
+
+    .content-no-margin {
+        margin-left: 80px;
+    }
+
+    #dash-content{
+        overflow-x: scroll;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    #sidebar{
+        display: none;
+    }
+
+    .content-no-margin {
+        margin-left: 80px;
+    }
+    #dash-content{
+        overflow-x: scroll;
+    }
+}
+

@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', 'Create User')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Create User') }}
@@ -59,7 +60,7 @@
                                 <label for="password_confirmation">Confirm Password</label>
                                 <input type="password" class="form-control w-full" id="password_confirmation" name="password_confirmation" required>
                             </div>
-                            <button type="submit" class="btn btn-primary">Register</button>
+                            <button type="submit" class="btn btn-success text-white">Register</button>
                         </form>
                     </div>
                 </div>

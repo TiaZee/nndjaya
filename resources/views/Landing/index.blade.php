@@ -7,15 +7,15 @@
         <center>
             <h1 class="font-bold text-black text-3xl m-3">About Us</h1>
         </center>
-        <div class="flex justify-center p-[1.3rem]">
-            <div class="w-[50%]">
+        <div class="flex flex-wrap justify-center p-[1.3rem]">
+            <div class="lg:w-[50%] w-full">
                 {{-- <img
                 class=""
                 src="https://images.unsplash.com/photo-1573332775719-8995fd305918?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> --}}
                 {{-- <img src="https://images.unsplash.com/photo-1600267188229-1dd3dd776737?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> --}}
                 <img src="https://images.unsplash.com/photo-1499195333224-3ce974eecb47?q=80&w=1502&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
             </div>
-            <div class="w-[50%] p-[1.3rem] text-black">
+            <div class="lg:w-[50%] w-full p-[1.3rem] text-black">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, aspernatur repellendus atque sint rem eveniet quaerat sapiente quam accusantium incidunt ad voluptate quia perferendis corrupti, expedita quod quidem sequi? Voluptates eaque similique illo ut officia exercitationem beatae sequi sunt ratione optio, magni repellendus incidunt odio sint dolore veritatis perspiciatis a? Optio alias labore odit beatae iusto obcaecati animi ducimus laborum vero quae laboriosam eius vel voluptas, incidunt quis reprehenderit nemo facere maiores nostrum saepe? Fuga tempore natus laudantium, deserunt reprehenderit magnam odio consequatur facere fugit corrupti officia quos mollitia, suscipit iste ex inventore illum eos vitae beatae nemo repellat! Aspernatur.
                 </p>
@@ -30,69 +30,23 @@
     <br><br>
     <section id="products" style="margin-bottom: 5rem;">
         <center>
-            <h1 class="font-bold text-black text-3xl mb-6">Produk</h1>
+            <h1 class="font-bold text-black text-3xl mb-6">Product</h1>
         </center>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6 p-6">
+            @foreach ($Items as $item)
             <div class="card bg-white w-full shadow-xl text-black">
                 <figure class="px-10 pt-10">
                     <img
-                    src="https://images.unsplash.com/photo-1519686997393-7bdb73d6c54d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="{{ asset($item->item_photo) }}"
                     alt="Shoes"
-                    class="rounded-xl" />
+                    class="rounded-xl w-[100px] h-[100px]" />
                 </figure>
                 <div class="card-body items-center text-center">
-                    <h2 class="card-title">Candy!</h2>
-                    <p>Rp. 50.000.000</p>
+                    <h2 class="card-title">{{ $item->name }}</h2>
+                    <p class="format-number">{{ $item->sale_price }}</p>
                 </div>
             </div>
-            <div class="card bg-white w-full shadow-xl text-black">
-                <figure class="px-10 pt-10">
-                    <img
-                    src="https://images.unsplash.com/photo-1519686997393-7bdb73d6c54d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Shoes"
-                    class="rounded-xl" />
-                </figure>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">Candy!</h2>
-                    <p>Rp. 50.000.000</p>
-                </div>
-            </div>
-            <div class="card bg-white w-full shadow-xl text-black">
-                <figure class="px-10 pt-10">
-                    <img
-                    src="https://images.unsplash.com/photo-1519686997393-7bdb73d6c54d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Shoes"
-                    class="rounded-xl" />
-                </figure>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">Candy!</h2>
-                    <p>Rp. 50.000.000</p>
-                </div>
-            </div>
-            <div class="card bg-white w-full shadow-xl text-black">
-                <figure class="px-10 pt-10">
-                    <img
-                    src="https://images.unsplash.com/photo-1519686997393-7bdb73d6c54d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Shoes"
-                    class="rounded-xl" />
-                </figure>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">Candy!</h2>
-                    <p>Rp. 50.000.000</p>
-                </div>
-            </div>
-            <div class="card bg-white w-full shadow-xl text-black">
-                <figure class="px-10 pt-10">
-                    <img
-                    src="https://images.unsplash.com/photo-1519686997393-7bdb73d6c54d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Shoes"
-                    class="rounded-xl" />
-                </figure>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">Candy!</h2>
-                    <p>Rp. 50.000.000</p>
-                </div>
-            </div>
+            @endforeach
 
         </div>
     </section>
@@ -121,7 +75,22 @@
         </center>
 
         <div class="flex justify-center w-full">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.2711821081934!2d112.49170597412177!3d-7.86666517820967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788784d4c674a1%3A0xdd0c7c98284487e1!2sSonggoriti%20Hot%20Spring!5e0!3m2!1sen!2sid!4v1717813478049!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.607834401251!2d112.58000547027417!3d-7.2853818554917025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78073aa98ac93f%3A0x92763193cd545a74!2sJl.%20Bukit%20Cemara%20Wangi%2C%20Hulaan%2C%20Kec.%20Menganti%2C%20Kabupaten%20Gresik%2C%20Jawa%20Timur%2061174!5e0!3m2!1sid!2sid!4v1724127127611!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
+
+    <script>
+        function formatNumber(number) {
+            return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        function formatAllNumbers() {
+            var elements = document.querySelectorAll('.format-number');
+            elements.forEach(function(element) {
+                var number = parseInt(element.textContent, 10);
+                element.textContent = formatNumber(number);
+            });
+        }
+        window.onload = formatAllNumbers;
+    </script>
 @endsection

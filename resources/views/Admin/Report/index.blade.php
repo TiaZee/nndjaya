@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', 'Report')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Report') }}
@@ -31,7 +32,7 @@
                 </form>
 
                 <!-- Include Flatpickr JS -->
-                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>  
+                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
                 <script>
                     document.addEventListener('DOMContentLoaded', function() {
                         flatpickr("#date_a", {

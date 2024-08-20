@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', 'Receipt')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Receipt') }}
@@ -46,7 +47,7 @@
                         <p><strong>Address:</strong> {{ $address }}</p>
                         <p><strong>Billed:</strong> {{ $billed }}</p> --}}
                     </div>
-                    <div class="mt-5 mb-5"> <!-- mid (table)  -->
+                    <div class="mt-5 mb-5" id="dash-content"> <!-- mid (table)  -->
                         <table class="table">
                             <thead>
                                 <tr class="font-bold text-black">

@@ -1,15 +1,16 @@
 <!-- resources/views/items/index.blade.php -->
 
 <x-app-layout>
+    @section('title', 'Item List')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Items List') }}
+            {{ __('Item List') }}
         </h2>
     </x-slot>
 
     <div class="py-12">
         <div class="w-full mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white shadow-sm sm:rounded-lg" id="dash-content">
                 @if (session('success'))
                     <div role="alert" class="alert alert-success rounded-none">
                         <div class="flex items-center justify-center gap-2">
@@ -57,7 +58,7 @@
                                         No Image
                                         @endif
                                     </td>
-                                    <td>
+                                    <td class="flex flex-wrap gap-1">
                                         <a class="btn btn-warning btn-sm" href="{{ route('items.edit', $item->id) }}">Edit</a>
                                         <form action="{{ route('items.destroy', $item->id) }}" method="POST" style="display:inline;">
                                             @csrf

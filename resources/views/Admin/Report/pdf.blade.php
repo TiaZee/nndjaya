@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Report</title>
+    <title>Pdf Report</title>
     <style>
         table {
             width: 100%;

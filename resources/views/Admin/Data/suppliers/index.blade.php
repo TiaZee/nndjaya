@@ -1,15 +1,14 @@
-<!-- resources/views/suppliers/index.blade.php -->
-
 <x-app-layout>
+    @section('title', 'Suppliers')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Supplier') }}
+            {{ __('Suppliers') }}
         </h2>
     </x-slot>
 
     <div class="py-12">
         <div class="w-full mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white shadow-sm sm:rounded-lg" id="dash-content">
                 @if (session('success'))
                     <div role="alert" class="alert alert-success rounded-none">
                         <div class="flex items-center justify-center gap-2">
@@ -67,7 +66,7 @@
                                     <td>{{ $supplier->bank_number }}</td>
                                     <td>{{ $supplier->created_at->format('Y-m-d H:i:s') }}</td>
                                     <td>{{ $supplier->updated_at->format('Y-m-d H:i:s') }}</td>
-                                    <td>
+                                    <td class="flex flex-wrap gap-1">
                                         <a href="{{ route('suppliers.edit', $supplier->id) }}" class="btn btn-warning btn-sm">Edit</a>
                                         <form action="{{ route('suppliers.destroy', $supplier->id) }}" method="POST" style="display:inline;">
                                             @csrf
