@@ -36,7 +36,7 @@
     <br><br>
     <section id="products" style="margin-bottom: 5rem;">
         <center>
-            <h1 class="font-bold text-black text-3xl mb-6">Product</h1>
+            <h1 class="font-bold text-black text-3xl mb-6">PRODUCT</h1>
         </center>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6 p-6">
             @foreach ($Items as $item)
@@ -59,7 +59,7 @@
 
     <section id="olshop" style="margin-bottom: 5rem;">
         <center>
-            <h1 class="font-bold text-black text-3xl mb-6">Our Online shops</h1>
+            <h1 class="font-bold text-black text-3xl mb-6">CONTACT US</h1>
         </center>
         <div class="flex justify-center gap-2">
             <a href="" class="btn bg-black text-white outline-none border-none">
@@ -72,7 +72,7 @@
                 </svg>
                 Shopee
             </a>
-            <a href="https://wa.me/081223799441" target="_blank" class="flex items-center btn bg-[#4DCB5B] text-white hover:bg-black outline-none border-none">
+            <a href="https://wa.me/+6281223799441" target="_blank" class="flex items-center btn bg-[#4DCB5B] text-white hover:bg-black outline-none border-none">
                 <i class="fa-brands fa-whatsapp text-[30px]"></i>
                 Whatsapp
             </a>
@@ -81,12 +81,14 @@
 
     <section id="location" style="margin-bottom: 5rem;">
         <center>
-            <h1 class="font-bold text-black text-3xl mb-6">Our Location</h1>
+            <h1 class="font-bold text-black text-3xl mb-6">OUR LOCATION</h1>
         </center>
 
         <center>
 
-            <p><i class="fa-solid fa-location-dot text-2xl text-red-500"></i> Perumahan bukit Cemara wangi C18a, hula'an, Kec. Menganti, Kabupaten Gresik, Jawa Timur</p>
+            <p class="text-black text-2xl"><i class="fa-solid fa-location-dot text-2xl text-red-500"></i> Perumahan Bukit Cemara Wangi C18A</p>
+            <p class="text-black text-2xl">Kel. Hulaan, Kec. Menganti</p>
+            <p class="text-black text-2xl">Kabupaten Gresik, Jawa Timur</p>
         </center>
         <br>
         <div class="flex justify-center w-full">
