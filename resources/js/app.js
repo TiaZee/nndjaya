@@ -58,9 +58,23 @@ const swiper = new Swiper(".swiper", {
         el: ".swiper-pagination",
         clickable: true,
         dynamicBullets: true,
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
     },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+});
+
+document.getElementById('searchInput').addEventListener('keyup', function() {
+    let filter = this.value.toLowerCase();
+    let rows = document.querySelectorAll('table tbody tr');
+
+    rows.forEach(row => {
+        let text = row.textContent.toLowerCase();
+        row.style.display = text.includes(filter) ? '' : 'none';
+    });
 });

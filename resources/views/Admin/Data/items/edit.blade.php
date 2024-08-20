@@ -1,5 +1,6 @@
 <!-- resources/views/items/edit.blade.php -->
 <x-app-layout>
+    @section('title', 'Edit Item')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Edit Items') }}
@@ -59,12 +60,12 @@
                         </div>
                         <div>
                             <label for="item_photo">Item Photo</label>
-                            <input id="item_photo" class="block mt-1 w-full" type="file" name="item_photo" />
+                            <input id="item_photo" class="file-input file-input-bordered block mt-1 w-full" type="file" name="item_photo" />
                             @if($item->item_photo)
                                 <img src="{{ asset($item->item_photo) }}" alt="Item Photo" class="mt-2" style="max-width: 200px;">
                             @endif
                         </div>
-                        <button class="btn text-white" type="submit">Update Item</button>
+                        <button class="btn btn-warning" type="submit">Update Item</button>
                     </form>
 
                 </div>

@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', 'Users')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Users') }}
@@ -10,7 +11,10 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-black">
                     <table class="table">
-                        <a href="{{ route('users.create') }}" class="btn text-white">Add User</a>
+                        <div class="flex justify-between items-center mb-4">
+                            <a href="{{ route('users.create') }}" class="btn btn-success text-white mb-5">Add User</a>
+                            <input type="text" id="searchInput" placeholder="Search..." class="px-4 py-2 border rounded-lg w-1/3">
+                        </div>
 
                         <thead class="text-black">
                             <tr>
@@ -26,12 +30,12 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <td>
-                                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning">Edit</a>
+                                    <td class="flex flex-wrap gap-1">
+                                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning btn-sm">Edit</a>
                                         <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline;">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                            <button type="submit" class="btn btn-error text-white btn-sm">Delete</button>
                                         </form>
                                     </td>
                                 </tr>

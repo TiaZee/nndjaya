@@ -1,4 +1,7 @@
 <x-app-layout>
+    @section('title')
+        {{ Auth::user()->role }} Dashboard
+    @endsection
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
@@ -9,8 +12,8 @@
     <div class="py-12">
         <div class="w-full mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    <div class="flex gap-5">
+                <div class="p-6 text-gray-900 ">
+                    <div class="flex gap-5 flex-wrap">
                         <div class="w-[160px]  bg-green-500 p-3 text-white">
                             <h1 class="text-md font-bold">BARANG PALING LARIS</h1>
                             <span>0</span>

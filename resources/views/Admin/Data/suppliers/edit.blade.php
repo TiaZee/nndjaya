@@ -1,5 +1,6 @@
 <!-- resources/views/suppliers/edit.blade.php -->
 <x-app-layout>
+    @section('title', 'Edit Suppliers')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Edit Supplier') }}
@@ -39,7 +40,7 @@
                             <input type="text" id="bank_number" name="bank_number" value="{{ old('bank_number', $supplier->bank_number) }}" required>
                         </div>
 
-                        <button class="btn text-white" type="submit">Update Supplier</button>
+                        <button class="btn btn-warning" type="submit">Update Supplier</button>
                     </form>
                 </div>
             </div>

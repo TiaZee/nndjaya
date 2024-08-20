@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', 'Edit Sale')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Edit Sale') }}
@@ -51,7 +52,7 @@
                     </div>
 
                     <div class="flex items-center justify-end">
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-warning">
                             {{ __('Update Sale') }}
                         </button>
                     </div>

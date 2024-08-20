@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', 'Report')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Report') }}
@@ -81,7 +82,13 @@
                         </table>
                     </div>
                 @endif
+
             </div>
+            <!-- Tombol Cetak PDF -->
+            <a href="{{ route('report.pdf', ['date_a' => request('date_a'), 'date_b' => request('date_b')]) }}" class="mt-4 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Print to PDF
+            </a>
+
         </div>
     </div>
 </x-app-layout>

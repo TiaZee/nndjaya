@@ -13,7 +13,7 @@ use App\Http\Controllers\ItemAnalisisController;
 use App\Http\Controllers\AccountAnalisisController;
 
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -26,6 +26,7 @@ Route::middleware('auth')->group(function () {
 
     // Route to display the report form
     Route::get('/report', [ReportController::class, 'index'])->name('report.index');
+    Route::get('/report/pdf', [ReportController::class, 'exportPdf'])->name('report.pdf');
 
     Route::group(['middleware' => ['role:Admin|Owner']], function () {
         // Route to display the list of suppliers

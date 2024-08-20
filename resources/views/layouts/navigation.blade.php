@@ -51,7 +51,6 @@
                                     <i class="fa-solid fa-truck-field"></i>
                                 </div>
                                 Suppliers
-
                             </div>
                         </x-dash-links>
                     </li>
@@ -62,7 +61,6 @@
                                     <i class="fa-solid fa-candy-cane"></i>
                                 </div>
                                 Items
-
                             </div>
                         </x-dash-links>
                     </li>
@@ -73,7 +71,6 @@
                                     <i class="fa-solid fa-cubes-stacked"></i>
                                 </div>
                                 Restocks
-
                             </div>
                         </x-dash-links>
                     </li>
@@ -84,7 +81,6 @@
                                     <i class="fa-solid fa-cart-arrow-down"></i>
                                 </div>
                                 Sales
-
                             </div>
                         </x-dash-links>
                     </li>
@@ -95,7 +91,6 @@
                                     <i class="fa-solid fa-book"></i>
                                 </div>
                                 Report
-
                             </div>
                         </x-dash-links>
                     </li>
@@ -107,15 +102,15 @@
                     </li> --}}
                     <li>
                         <x-dash-links>
-                            <div class="flex">
-                                <div class="icons">
-                                    <i class="fa-solid fa-right-from-bracket"></i>
-                                </div>
-                                <form action="{{ route('logout') }}" method="POST">
-                                    @csrf
-                                    <button type="submit" class="text-black hover:text-white w-full text-start">Logout</button>
-                                </form>
-                            </div>
+                            <form action="{{ route('logout') }}" method="POST" class="flex w-full">
+                                @csrf
+                                <button type="submit" class="text-black text-start flex w-full hover:text-white h-full">
+                                    <div class="icons">
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                    </div>
+                                    Logout
+                                </button>
+                            </form>
                         </x-dash-link>
                     </li>
                 </ul>
@@ -202,7 +197,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="tooltip tooltip-right w-full" data-tip="Sales">
+                        <div class="tooltip tooltip-right w-full" data-tip="Report">
                             <x-dash-links :href="route('report.index')" :active="request()->routeIs('report.index')">
                                 <center>
                                     <i class="fa-solid fa-book"></i>
