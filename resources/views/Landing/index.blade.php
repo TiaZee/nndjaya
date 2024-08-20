@@ -5,7 +5,7 @@
     </section>
     <section id="about" class="text-black p-4 font-bold">
         <center>
-            <h1 class="font-bold text-black text-3xl m-3">About Us</h1>
+            <h1 class="font-bold text-black text-3xl m-3">ABOUT US</h1>
         </center>
         <div class="flex flex-wrap justify-center p-[1.3rem]">
             <div class="lg:w-[50%] w-full">
@@ -15,14 +15,20 @@
                 {{-- <img src="https://images.unsplash.com/photo-1600267188229-1dd3dd776737?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> --}}
                 <img src="https://images.unsplash.com/photo-1499195333224-3ce974eecb47?q=80&w=1502&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
             </div>
-            <div class="lg:w-[50%] w-full p-[1.3rem] text-black">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, aspernatur repellendus atque sint rem eveniet quaerat sapiente quam accusantium incidunt ad voluptate quia perferendis corrupti, expedita quod quidem sequi? Voluptates eaque similique illo ut officia exercitationem beatae sequi sunt ratione optio, magni repellendus incidunt odio sint dolore veritatis perspiciatis a? Optio alias labore odit beatae iusto obcaecati animi ducimus laborum vero quae laboriosam eius vel voluptas, incidunt quis reprehenderit nemo facere maiores nostrum saepe? Fuga tempore natus laudantium, deserunt reprehenderit magnam odio consequatur facere fugit corrupti officia quos mollitia, suscipit iste ex inventore illum eos vitae beatae nemo repellat! Aspernatur.
-                </p>
+            <div class="lg:w-[50%] w-full px-[1.3rem] text-black">
+                <h1 class="font-bold text-black text-2xl">Sejarah NN Djaya Snack</h1>
                 <br>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe ullam beatae placeat eum, corporis sed voluptates asperiores ea tempore amet consequuntur dignissimos soluta consequatur! Vitae ipsa itaque adipisci perferendis accusamus distinctio sunt deleniti nobis voluptatum tenetur sapiente, excepturi autem.
-                </p>
+                <P class="text-justify">NN Djaya Snack didirikan pada tahun 2022 di Menganti, Gresik. Sebagai perusahaan yang relatif baru, NN Djaya Snack telah berkembang pesat dalam dunia distribusi permen. Berawal dari ide untuk menyediakan produk permen berkualitas tinggi dengan harga yang terjangkau, kami mulai dengan mendistribusikan berbagai macam permen dari produsen besar langsung kepada pelanggan.</P>
+                <br>
+                <P class="text-justify">Seiring berjalannya waktu, NN Djaya Snack telah menjadi salah satu distributor permen terkemuka di daerah Gresik dan sekitarnya. Keberhasilan ini tidak lepas dari komitmen kami untuk selalu menjaga kualitas produk dan pelayanan, serta memperhatikan kebutuhan dan keinginan konsumen.</P>
+                <br>
+                <br>
+                <h1 class="font-bold text-black text-2xl">Apa itu NN Djaya Snack?</h1>
+                <br>
+                <p class="text-justify">NN Djaya Snack adalah distributor permen yang menawarkan berbagai macam produk permen dari berbagai merek terkemuka. Kami menyediakan produk dalam jumlah besar maupun kecil, yang memungkinkan pelanggan kami mendapatkan produk sesuai kebutuhan mereka. Dengan jaringan distribusi yang luas, NN Djaya Snack memastikan bahwa produk kami selalu tersedia dan dapat diakses oleh berbagai lapisan masyarakat.</p>
+                <br>
+                <p class="text-justify">Misi kami adalah memberikan kepuasan kepada konsumen melalui produk-produk berkualitas dengan harga yang kompetitif. Selain itu, kami juga berkomitmen untuk terus berinovasi dan berkembang agar dapat memenuhi kebutuhan pasar yang terus berubah. Dengan pendekatan yang ramah pelanggan, NN Djaya Snack terus berupaya untuk menjadi pilihan utama dalam hal penyediaan permen dan snack di Indonesia.</p>
+                <br>
             </div>
         </div>
 
@@ -30,7 +36,7 @@
     <br><br>
     <section id="products" style="margin-bottom: 5rem;">
         <center>
-            <h1 class="font-bold text-black text-3xl mb-6">Product</h1>
+            <h1 class="font-bold text-black text-3xl mb-6">PRODUCT</h1>
         </center>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6 p-6">
             @foreach ($Items as $item)
@@ -53,7 +59,7 @@
 
     <section id="olshop" style="margin-bottom: 5rem;">
         <center>
-            <h1 class="font-bold text-black text-3xl mb-6">Our Online shops</h1>
+            <h1 class="font-bold text-black text-3xl mb-6">CONTACT US</h1>
         </center>
         <div class="flex justify-center gap-2">
             <a href="" class="btn bg-black text-white outline-none border-none">
@@ -66,16 +72,27 @@
                 </svg>
                 Shopee
             </a>
+            <a href="https://wa.me/+6281223799441" target="_blank" class="flex items-center btn bg-[#4DCB5B] text-white hover:bg-black outline-none border-none">
+                <i class="fa-brands fa-whatsapp text-[30px]"></i>
+                Whatsapp
+            </a>
         </div>
     </section>
 
     <section id="location" style="margin-bottom: 5rem;">
         <center>
-            <h1 class="font-bold text-black text-3xl mb-6">Our Location</h1>
+            <h1 class="font-bold text-black text-3xl mb-6">OUR LOCATION</h1>
         </center>
 
+        <center>
+
+            <p class="text-black text-2xl"><i class="fa-solid fa-location-dot text-2xl text-red-500"></i> Perumahan Bukit Cemara Wangi C18A</p>
+            <p class="text-black text-2xl">Kel. Hulaan, Kec. Menganti</p>
+            <p class="text-black text-2xl">Kabupaten Gresik, Jawa Timur</p>
+        </center>
+        <br>
         <div class="flex justify-center w-full">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.607834401251!2d112.58000547027417!3d-7.2853818554917025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78073aa98ac93f%3A0x92763193cd545a74!2sJl.%20Bukit%20Cemara%20Wangi%2C%20Hulaan%2C%20Kec.%20Menganti%2C%20Kabupaten%20Gresik%2C%20Jawa%20Timur%2061174!5e0!3m2!1sid!2sid!4v1724127127611!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3957.6136654607617!2d112.5815112!3d-7.2847215!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e780771b0e9af2f%3A0x479067d9e61fe9e1!2s&#39;NN&#39;%20DJAYA%20SNACK%20PUSAT%20GROSIR%20SNACK%20IMPORT!5e0!3m2!1sid!2sid!4v1724154844280!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 

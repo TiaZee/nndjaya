@@ -8,8 +8,8 @@
             <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[999] p-2 shadow rounded-box w-52 bg-white">
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#products">Product</a></li>
-                <li><a href="#olshop">Online Shop</a></li>
-                <li><a href="#location">Location</a></li>
+                <li><a href="#olshop">Contact Us</a></li>
+                <li><a href="#location">Our Location</a></li>
             </ul>
         </div>
         <a href="{{ route('home') }}">
@@ -23,8 +23,8 @@
         <ul class="menu menu-horizontal px-1">
             <li><a class="font-bold text-[15.5px]" href="#about">About Us</a></li>
             <li><a class="font-bold text-[15.5px]" href="#products">Product</a></li>
-            <li><a class="font-bold text-[15.5px]" href="#olshop">About us</a></li>
-            <li><a class="font-bold text-[15.5px]" href="#location">Location</a></li>
+            <li><a class="font-bold text-[15.5px]" href="#olshop">Contact Us</a></li>
+            <li><a class="font-bold text-[15.5px]" href="#location">Our Location</a></li>
         </ul>
     </div>
     <div class="navbar-end">

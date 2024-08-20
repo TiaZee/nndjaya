@@ -6,6 +6,7 @@ use App\Models\Sales;
 use App\Models\Item;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\DB;
 
 class SalesController extends Controller
 {
