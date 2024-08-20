@@ -15,8 +15,7 @@
                 {{-- <img src="https://images.unsplash.com/photo-1600267188229-1dd3dd776737?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> --}}
                 <img src="https://images.unsplash.com/photo-1499195333224-3ce974eecb47?q=80&w=1502&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
             </div>
-            <div class="lg:w-[50%] w-full p-[1.3rem] text-black">
-                <br>
+            <div class="lg:w-[50%] w-full px-[1.3rem] text-black">
                 <h1 class="font-bold text-black text-2xl">Sejarah NN Djaya Snack</h1>
                 <br>
                 <P class="text-justify">NN Djaya Snack didirikan pada tahun 2022 di Menganti, Gresik. Sebagai perusahaan yang relatif baru, NN Djaya Snack telah berkembang pesat dalam dunia distribusi permen. Berawal dari ide untuk menyediakan produk permen berkualitas tinggi dengan harga yang terjangkau, kami mulai dengan mendistribusikan berbagai macam permen dari produsen besar langsung kepada pelanggan.</P>
