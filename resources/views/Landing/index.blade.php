@@ -5,7 +5,7 @@
     </section>
     <section id="about" class="text-black p-4 font-bold">
         <center>
-            <h1 class="font-bold text-black text-3xl m-3">About Us</h1>
+            <h1 class="font-bold text-black text-3xl m-3">ABOUT US</h1>
         </center>
         <div class="flex flex-wrap justify-center p-[1.3rem]">
             <div class="lg:w-[50%] w-full">
@@ -16,13 +16,20 @@
                 <img src="https://images.unsplash.com/photo-1499195333224-3ce974eecb47?q=80&w=1502&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
             </div>
             <div class="lg:w-[50%] w-full p-[1.3rem] text-black">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, aspernatur repellendus atque sint rem eveniet quaerat sapiente quam accusantium incidunt ad voluptate quia perferendis corrupti, expedita quod quidem sequi? Voluptates eaque similique illo ut officia exercitationem beatae sequi sunt ratione optio, magni repellendus incidunt odio sint dolore veritatis perspiciatis a? Optio alias labore odit beatae iusto obcaecati animi ducimus laborum vero quae laboriosam eius vel voluptas, incidunt quis reprehenderit nemo facere maiores nostrum saepe? Fuga tempore natus laudantium, deserunt reprehenderit magnam odio consequatur facere fugit corrupti officia quos mollitia, suscipit iste ex inventore illum eos vitae beatae nemo repellat! Aspernatur.
-                </p>
                 <br>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe ullam beatae placeat eum, corporis sed voluptates asperiores ea tempore amet consequuntur dignissimos soluta consequatur! Vitae ipsa itaque adipisci perferendis accusamus distinctio sunt deleniti nobis voluptatum tenetur sapiente, excepturi autem.
-                </p>
+                <h1 class="font-bold text-black text-2xl">Sejarah NN Djaya Snack</h1>
+                <br>
+                <P class="text-justify">NN Djaya Snack didirikan pada tahun 2022 di Menganti, Gresik. Sebagai perusahaan yang relatif baru, NN Djaya Snack telah berkembang pesat dalam dunia distribusi permen. Berawal dari ide untuk menyediakan produk permen berkualitas tinggi dengan harga yang terjangkau, kami mulai dengan mendistribusikan berbagai macam permen dari produsen besar langsung kepada pelanggan.</P>
+                <br>
+                <P class="text-justify">Seiring berjalannya waktu, NN Djaya Snack telah menjadi salah satu distributor permen terkemuka di daerah Gresik dan sekitarnya. Keberhasilan ini tidak lepas dari komitmen kami untuk selalu menjaga kualitas produk dan pelayanan, serta memperhatikan kebutuhan dan keinginan konsumen.</P>
+                <br>
+                <br>
+                <h1 class="font-bold text-black text-2xl">Apa itu NN Djaya Snack?</h1>
+                <br>
+                <p class="text-justify">NN Djaya Snack adalah distributor permen yang menawarkan berbagai macam produk permen dari berbagai merek terkemuka. Kami menyediakan produk dalam jumlah besar maupun kecil, yang memungkinkan pelanggan kami mendapatkan produk sesuai kebutuhan mereka. Dengan jaringan distribusi yang luas, NN Djaya Snack memastikan bahwa produk kami selalu tersedia dan dapat diakses oleh berbagai lapisan masyarakat.</p>
+                <br>
+                <p class="text-justify">Misi kami adalah memberikan kepuasan kepada konsumen melalui produk-produk berkualitas dengan harga yang kompetitif. Selain itu, kami juga berkomitmen untuk terus berinovasi dan berkembang agar dapat memenuhi kebutuhan pasar yang terus berubah. Dengan pendekatan yang ramah pelanggan, NN Djaya Snack terus berupaya untuk menjadi pilihan utama dalam hal penyediaan permen dan snack di Indonesia.</p>
+                <br>
             </div>
         </div>
 

@@ -12,19 +12,19 @@
     <div class="py-12">
         <div class="w-full mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 ">
+                <div class="p-6 text-gray-900">
                     <div class="flex gap-5 flex-wrap">
-                        <div class="w-[160px]  bg-green-500 p-3 text-white">
-                            <h1 class="text-md font-bold">BARANG PALING LARIS</h1>
-                            <span>0</span>
+                        <div class="w-[160px] bg-green-500 p-3 text-white">
+                            <h1 class="text-md font-bold">BARANG PALING LARIS :</h1>
+                            <span>{{ $topItem }} ({{ $totalSales }})</span>
                         </div>
                         <div class="w-[160px] bg-yellow-500 p-3 text-white">
-                            <h1 class="text-md font-bold">iTEMS</h1>
-                            <span>0</span>
+                            <h1 class="text-md font-bold">TOTAL ITEMS</h1>
+                            <span>{{ $itemsCount }}</span>
                         </div>
                         <div class="w-[160px] bg-red-500 p-3 text-white">
-                            <h1 class="text-md font-bold">SALES</h1>
-                            <span>0</span>
+                            <h1 class="text-md font-bold">TOTAL MONTHLY SALES</h1>
+                            <span>{{ $monthlySalesFormatted }}</span>
                         </div>
                     </div>
                 </div>
@@ -53,5 +53,3 @@
     </div>
     @endrole
 </x-app-layout>
-
-
