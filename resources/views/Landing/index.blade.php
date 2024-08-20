@@ -72,6 +72,10 @@
                 </svg>
                 Shopee
             </a>
+            <a href="https://wa.me/081223799441" target="_blank" class="flex items-center btn bg-[#4DCB5B] text-white hover:bg-black outline-none border-none">
+                <i class="fa-brands fa-whatsapp text-[30px]"></i>
+                Whatsapp
+            </a>
         </div>
     </section>
 
@@ -80,8 +84,13 @@
             <h1 class="font-bold text-black text-3xl mb-6">Our Location</h1>
         </center>
 
+        <center>
+
+            <p><i class="fa-solid fa-location-dot text-2xl text-red-500"></i> Perumahan bukit Cemara wangi C18a, hula'an, Kec. Menganti, Kabupaten Gresik, Jawa Timur</p>
+        </center>
+        <br>
         <div class="flex justify-center w-full">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.607834401251!2d112.58000547027417!3d-7.2853818554917025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78073aa98ac93f%3A0x92763193cd545a74!2sJl.%20Bukit%20Cemara%20Wangi%2C%20Hulaan%2C%20Kec.%20Menganti%2C%20Kabupaten%20Gresik%2C%20Jawa%20Timur%2061174!5e0!3m2!1sid!2sid!4v1724127127611!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3957.6136654607617!2d112.5815112!3d-7.2847215!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e780771b0e9af2f%3A0x479067d9e61fe9e1!2s&#39;NN&#39;%20DJAYA%20SNACK%20PUSAT%20GROSIR%20SNACK%20IMPORT!5e0!3m2!1sid!2sid!4v1724154844280!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
