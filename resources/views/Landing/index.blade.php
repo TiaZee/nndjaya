@@ -9,10 +9,6 @@
         </center>
         <div class="flex flex-wrap justify-center p-[1.3rem]">
             <div class="lg:w-[50%] w-full">
-                {{-- <img
-                class=""
-                src="https://images.unsplash.com/photo-1573332775719-8995fd305918?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> --}}
-                {{-- <img src="https://images.unsplash.com/photo-1600267188229-1dd3dd776737?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> --}}
                 <img src="https://images.unsplash.com/photo-1499195333224-3ce974eecb47?q=80&w=1502&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
             </div>
             <div class="lg:w-[50%] w-full px-[1.3rem] text-black">
@@ -130,7 +126,7 @@
             const showLessButton = document.getElementById('show-less');
 
             // Initially show only 5 items
-            const initialVisibleItems = 5;
+            const initialVisibleItems = 6;
             items.forEach((item, index) => {
                 if (index < initialVisibleItems) {
                     item.classList.remove('hidden');

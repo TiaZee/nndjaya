@@ -29,18 +29,6 @@
                     </div>
 
 
-                    @if(session('success'))
-                        <div class="alert alert-success">
-                            {{ session('success') }}
-                        </div>
-                    @endif
-
-                    @if(session('success'))
-                        <div class="alert alert-success">
-                            {{ session('success') }}
-                        </div>
-                    @endif
-
                     <table class="table mt-4 text-black">
                         <thead class="text-black">
                             <tr>
