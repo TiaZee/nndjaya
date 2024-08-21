@@ -38,9 +38,17 @@
         <center>
             <h1 class="font-bold text-black text-3xl mb-6">PRODUCT</h1>
         </center>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6 p-6">
+        <!-- Skeleton Loader -->
+        <div id="loading-skeleton" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6 p-6">
+            <div class="skeleton h-32 w-32"></div>
+            <div class="skeleton h-32 w-32"></div>
+            <div class="skeleton h-32 w-32"></div>
+            <div class="skeleton h-32 w-32"></div>
+            <div class="skeleton h-32 w-32"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6 p-6 hidden" id="card-product">
             @foreach ($Items as $item)
-            <div class="card bg-white w-full shadow-xl text-black">
+            <div class="card bg-white w-full shadow-xl text-black hidden">
                 <figure class="px-10 pt-10">
                     <img
                     src="{{ asset($item->item_photo) }}"
@@ -54,6 +62,12 @@
             </div>
             @endforeach
 
+        </div>
+
+        <!-- Show More and Show Less Buttons -->
+        <div class="text-center mt-4 p-5">
+            <button id="show-more" class="show-more w-full"><i class="fa-solid fa-angles-down"></i> Show More</button>
+            <button id="show-less" class="show-less hidden w-full"><i class="fa-solid fa-angles-up"></i> Show Less</button>
         </div>
     </section>
 
@@ -109,5 +123,88 @@
             });
         }
         window.onload = formatAllNumbers;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const items = document.querySelectorAll('#card-product .card');
+            const showMoreButton = document.getElementById('show-more');
+            const showLessButton = document.getElementById('show-less');
+
+            // Initially show only 5 items
+            const initialVisibleItems = 5;
+            items.forEach((item, index) => {
+                if (index < initialVisibleItems) {
+                    item.classList.remove('hidden');
+                }
+            });
+
+            showMoreButton.addEventListener('click', function () {
+                // Show all items
+                items.forEach(item => item.classList.remove('hidden'));
+
+                // Hide the Show More button and show the Show Less button
+                showMoreButton.classList.add('hidden');
+                showLessButton.classList.remove('hidden');
+            });
+
+            showLessButton.addEventListener('click', function () {
+                // Hide all items except the first 5
+                items.forEach((item, index) => {
+                    if (index >= initialVisibleItems) {
+                        item.classList.add('hidden');
+                    }
+                });
+
+                // Show the Show More button and hide the Show Less button
+                showMoreButton.classList.remove('hidden');
+                showLessButton.classList.add('hidden');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const items = document.querySelectorAll('#card-product .card');
+            const showMoreButton = document.getElementById('show-more');
+            const showLessButton = document.getElementById('show-less');
+            const loadingSkeleton = document.getElementById('loading-skeleton');
+            const cardProduct = document.getElementById('card-product');
+            const toggleButtons = document.getElementById('toggle-buttons');
+
+            // Simulate data loading
+            setTimeout(() => {
+                // Hide skeleton and show actual content
+                loadingSkeleton.classList.add('hidden');
+                cardProduct.classList.remove('hidden');
+                toggleButtons.classList.remove('hidden');
+
+                // Initially show only 5 items
+                const initialVisibleItems = 5;
+                items.forEach((item, index) => {
+                    if (index < initialVisibleItems) {
+                        item.classList.remove('hidden');
+                    }
+                });
+
+                showMoreButton.addEventListener('click', function () {
+                    // Show all items
+                    items.forEach(item => item.classList.remove('hidden'));
+
+                    // Hide the Show More button and show the Show Less button
+                    showMoreButton.classList.add('hidden');
+                    showLessButton.classList.remove('hidden');
+                });
+
+                showLessButton.addEventListener('click', function () {
+                    // Hide all items except the first 5
+                    items.forEach((item, index) => {
+                        if (index >= initialVisibleItems) {
+                            item.classList.add('hidden');
+                        }
+                    });
+
+                    // Show the Show More button and hide the Show Less button
+                    showMoreButton.classList.remove('hidden');
+                    showLessButton.classList.add('hidden');
+                });
+            }, 2000); // Simulate a 2-second loading time
+        });
     </script>
 @endsection

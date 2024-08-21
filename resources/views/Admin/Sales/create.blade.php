@@ -41,6 +41,9 @@
                     <div class="form-control">
                         <label for="item_id">Item</label>
                         <select name="item_id" id="item_id" required>
+                            <!-- Opsi default yang dinonaktifkan -->
+                            <option value="" disabled selected>SELECT ITEM</option>
+                            <!-- Loop untuk menampilkan item dari database -->
                             @foreach($items as $item)
                                 <option value="{{ $item->id }}">{{ $item->name }}</option>
                             @endforeach
@@ -50,6 +53,9 @@
                     <div class="form-control">
                         <label for="sale_qty">Sale Quantity</label>
                         <input id="sale_qty" class="block mt-1 w-full" type="number" name="sale_qty" required />
+                        <span id="stock_info">
+                            <i>available stock: N/A</i>
+                        </span>
                     </div>
 
                     <div class="flex items-center mt-4">
@@ -61,4 +67,29 @@
             </div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#item_id').on('change', function() {
+                var itemId = $(this).val();
+
+                if(itemId) {
+                    $.ajax({
+                        url: '/items/' + itemId + '/quantity',
+                        type: 'GET',
+                        dataType: 'json',
+                        success: function(data) {
+                            $('#stock_info').html('<i>available stock: ' + data.item_qty + '</i>');
+                        },
+                        error: function() {
+                            $('#stock_info').html('<i>available stock: N/A</i>');
+                        }
+                    });
+                } else {
+                    $('#stock_info').html('<i>available stock: N/A</i>');
+                }
+            });
+        });
+    </script>
 </x-app-layout>

@@ -60,6 +60,37 @@
     object-fit: cover;
 }
 
+.show-more, .show-less{
+    padding: 1rem 1rem;
+    cursor: pointer;
+    border-radius: 15px 15px 15px 15px;
+    margin-bottom: 10px;
+}
+
+.show-more{
+    background-color: #000000;
+    color: #fff;
+}
+
+.show-more:hover{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid black;
+    transition: 1s all ease;
+}
+
+.show-less{
+    background-color: red;
+    color: #fff;
+}
+
+.show-less:hover{
+    background-color: #fff;
+    color: red;
+    border: 1px solid red;
+    transition: 1s all ease;
+}
+
 @media (max-width: 600px) {
     #sidebar{
         display: none;

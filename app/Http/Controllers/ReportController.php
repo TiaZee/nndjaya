@@ -116,7 +116,7 @@ class ReportController extends Controller
                 'dateB' => $dateB,
             ]);
 
-            return $pdf->download('report.pdf');
+            return $pdf->setPaper('a4', 'landscape')->download('report.pdf');
         }
 
         return redirect()->route('report.index')->withErrors('Date range not specified.');
