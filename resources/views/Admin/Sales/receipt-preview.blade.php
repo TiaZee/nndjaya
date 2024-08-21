@@ -19,12 +19,12 @@
                         <table>
                             <tbody>
                                 <tr>
-                                    <td class="font-bold">Restock ID</td>
+                                    <td class="font-bold">Sales ID</td>
                                     <td class="px-2">:</td>
                                     <td>{{ $restock_id }}</td>
                                 </tr>
                                 <tr>
-                                    <td class="font-bold">Buyer Name</td>
+                                    <td class="font-bold">Customer</td>
                                     <td class="px-2">:</td>
                                     <td>{{ $buyer_name }}</td>
                                 </tr>

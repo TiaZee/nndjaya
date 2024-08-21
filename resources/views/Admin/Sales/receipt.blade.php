@@ -30,8 +30,8 @@
 
     <div> <!-- Container Receipt  -->
         <div> <!-- top  -->
-            <p><strong>Restock ID:</strong> {{ $restock_id }}</p>
-            <p><strong>Buyer Name:</strong> {{ $buyer_name }}</p>
+            <p><strong>Sales ID:</strong> {{ $restock_id }}</p>
+            <p><strong>Customer:</strong> {{ $buyer_name }}</p>
             <p><strong>Address:</strong> {{ $address }}</p>
             <p><strong>Billed:</strong> {{ $billed }}</p>
         </div>
