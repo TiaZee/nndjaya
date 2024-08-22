@@ -11,7 +11,7 @@ class RestockController extends Controller
 {
     public function index()
     {
-        $restocks = Restock::all();
+        $restocks = Restock::paginate(10);
         return view('Admin.Restocks.index', compact('restocks'));
     }
 

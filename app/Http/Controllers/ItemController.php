@@ -13,7 +13,7 @@ class ItemController extends Controller
 {
     public function index()
     {
-        $items = Item::with('supplier')->get(); // Eager load supplier relationship
+        $items = Item::with('supplier')->paginate(10); // Eager load supplier relationship
         return view('Admin.Data.items.index', compact('items'));
     }
 
@@ -33,7 +33,7 @@ class ItemController extends Controller
             'supp_id' => 'required|exists:suppliers,id',
             'buy_price' => 'required|numeric|between:0,999999999.99',
             'sale_price' => 'required|numeric|between:0,999999999.99',
-            'item_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'item_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:1048',
         ]);
 
         $input = $request->all();

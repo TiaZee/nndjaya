@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Supplier;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -17,33 +18,35 @@ class SuppliersSeeder extends Seeder
      */
     public function run()
     {
-        Supplier::create([
-            'id' => 'MLG1',
-            'name' => 'Gudang Malang',
-            'city' => 'Malang',
-            'address' => 'Malang',
-            'bank' => 'BCA',
-            'bank_number' => '111122223333',
-        ]);
+        $cities = [
+            'Jakarta' => 'JKT',
+            'Bandung' => 'BDG',
+            'Semarang' => 'SMG',
+            'Yogyakarta' => 'YGY',
+            'Surabaya' => 'SUB',
+            'Malang' => 'MLG',
+            'Denpasar' => 'DPS',
+            'Medan' => 'MDN',
+            'Makassar' => 'MKS',
+            'Balikpapan' => 'BLP',
+            'Banjarmasin' => 'BNJ',
+            'Palembang' => 'PLB',
+            'Pekanbaru' => 'PKU',
+            'Pontianak' => 'PTK',
+            'Manado' => 'MND'
+        ];
 
-        Supplier::create([
-            'id'=> 'SUB1',
-            'name'=> 'Gudang Surabaya',
-            'city'=> 'Surabaya',
-            'address'=> 'Surabaya',
-            'bank'=> 'BCA',
-            'bank_number'=> '222244446666',
-        ]);
+        $banks = ['BCA', 'Mandiri', 'BNI', 'BRI', 'CIMB', 'Permata', 'Danamon'];
 
-        // Add more supplier entries as needed
-        // Example:
-        // Supplier::create([
-        //     'id' => 'SUR2',
-        //     'name' => 'Supplier Name',
-        //     'city' => 'City Name',
-        //     'address' => 'Address',
-        //     'bank' => 'Bank Name',
-        //     'bank_number' => 'Bank Number',
-        // ]);
+        foreach ($cities as $city => $code) {
+            Supplier::create([
+                'id' => $code . '1', // Menggunakan kode kota dengan angka 1
+                'name' => 'Gudang ' . $city,
+                'city' => $city,
+                'address' => $city,
+                'bank' => $banks[array_rand($banks)], // Bank dipilih acak dari array
+                'bank_number' => str_pad(rand(0, 999999999999), 12, '0', STR_PAD_LEFT), // Nomor bank acak 12 digit
+            ]);
+        }
     }
 }

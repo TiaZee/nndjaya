@@ -13,55 +13,28 @@ class ItemsSeeder extends Seeder
      */
     public function run()
     {
-        $items = [
-            [
-                'id' => 'ITM0001',
-                'name' => 'Candy 1',
-                'item_qty' => 0,
-                'supp_id' => 'MLG1',
-                'buy_price' => 10000.00,
-                'sale_price' => 12000.00,
-                'item_photo' => 'assets/img/item/seeder/candy1.jpg'
-            ],
-            [
-                'id' => 'ITM0002',
-                'name' => 'Candy 2',
-                'item_qty' => 0,
-                'supp_id' => 'MLG1',
-                'buy_price' => 8000.00,
-                'sale_price' => 9500.00,
-                'item_photo' => 'assets/img/item/seeder/candy2.jpg'
-            ],
-            [
-                'id' => 'ITM0003',
-                'name' => 'Candy 3',
-                'item_qty' => 0,
-                'supp_id' => 'SUB1',
-                'buy_price' => 20000.00,
-                'sale_price' => 25000.00,
-                'item_photo' => 'assets/img/item/seeder/candy3.jpg'
-            ],
-            [
-                'id' => 'ITM0004',
-                'name' => 'Candy 4',
-                'item_qty' => 0,
-                'supp_id' => 'SUB1',
-                'buy_price' => 14000.00,
-                'sale_price' => 16000.00,
-                'item_photo' => 'assets/img/item/seeder/candy4.jpg'
-            ],
-            [
-                'id' => 'ITM0005',
-                'name' => 'Candy 5',
-                'item_qty' => 0,
-                'supp_id' => 'SUB1',
-                'buy_price' => 15000.00,
-                'sale_price' => 20000.00,
-                'item_photo' => 'assets/img/item/seeder/candy5.jpg'
-            ],
+        $items = [];
 
-            // Add more items as needed
-        ];
+        for ($i = 1; $i <= 30; $i++) {
+            $id = 'ITM' . str_pad($i, 4, '0', STR_PAD_LEFT);
+            $buy_price = rand(5000, 20000); // Harga beli acak antara 5000 dan 20000
+            $sale_price = $buy_price + rand(1000, 7000); // Harga jual acak, lebih tinggi dari harga beli
+            $supp_id = rand(0, 1) ? 'SUB1' : 'MLG1'; // supp_id acak antara SUB1 dan MLG1
+
+            // Urutkan item_photo antara candy1.jpg sampai candy5.jpg
+            $photo_index = ($i - 1) % 5 + 1; // Menghasilkan angka antara 1 dan 5
+            $item_photo = 'assets/img/item/seeder/candy' . $photo_index . '.jpg';
+
+            $items[] = [
+                'id' => $id,
+                'name' => 'Candy ' . $i,
+                'item_qty' => 0,
+                'supp_id' => $supp_id,
+                'buy_price' => (float) $buy_price,
+                'sale_price' => (float) $sale_price,
+                'item_photo' => $item_photo,
+            ];
+        }
 
         foreach ($items as $item) {
             Item::updateOrCreate(

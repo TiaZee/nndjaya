@@ -42,7 +42,7 @@
                         <label for="item_id">Item</label>
                         <select name="item_id" id="item_id" required>
                             <!-- Opsi default yang dinonaktifkan -->
-                            <option value="" disabled selected>SELECT ITEM</option>
+                            <option value="" disabled selected>PILIH ITEM</option>
                             <!-- Loop untuk menampilkan item dari database -->
                             @foreach($items as $item)
                                 <option value="{{ $item->id }}">{{ $item->name }}</option>

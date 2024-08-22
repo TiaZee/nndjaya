@@ -1,6 +1,6 @@
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-        @foreach ($Items as $item)
+        @foreach ($Items->take(4) as $item)
         <div class="swiper-slide relative">
             <!-- Skeleton Loader -->
             <div class="skeleton h-full w-full absolute inset-0" style="display: block;"></div>

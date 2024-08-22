@@ -70,6 +70,9 @@
                             @endforeach
                         </tbody>
                     </table>
+                    <div class="w-full flex justify-center text-black text-lg">
+                        {{ $items->links('vendor.pagination.daisy') }}
+                    </div>
                 </div>
             </div>
         </div>
